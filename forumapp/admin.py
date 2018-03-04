@@ -5,16 +5,15 @@ from .models import Question, Comment
 # Register your models here.
 
 
-# class QuestionAdmin(admin.ModelAdmin):
-#     # list_display = ('author','title')
-#     list_editable = ('title',)
+class QuestionAdmin(admin.ModelAdmin):
+    list_display = ('author', 'title')
 
 
-# class CommentAdmin(admin.ModelAdmin):
-#     list_display = ['question', 'timestamp_comment']
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ['author_comment', 'question', 'timestamp_comment']
 
 # admin.site.register(Question)
 
 # admin.site.register(Question,QuestionAdmin)
-admin.site.register(Question)
-admin.site.register(Comment)
+admin.site.register(Question, QuestionAdmin)
+admin.site.register(Comment, CommentAdmin)

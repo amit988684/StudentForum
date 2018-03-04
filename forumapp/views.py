@@ -28,7 +28,8 @@ class QuestionDetailView(LoginRequiredMixin,DetailView):
 class QuestionCreateView(LoginRequiredMixin,CreateView):
     model = Question
     form_class = QuestionForm
-    redirect_field_name = "forumapp/post_detail.html"
+    redirect_field_name = "forumapp/question_detail.html"
+
     #     login_url = '/login/'
     # Newly added
 
@@ -36,7 +37,7 @@ class QuestionCreateView(LoginRequiredMixin,CreateView):
         self.object = form.save(commit=False)
         self.object.author = self.request.user
         self.object.save()
-        return super(QuestionCreateView,self).form_valid(form)
+        return super(QuestionCreateView, self).form_valid(form)
 
 
 class QuestionUpdateView(LoginRequiredMixin,UpdateView):

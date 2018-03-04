@@ -45,7 +45,7 @@ class Question(models.Model):
 
 class Comment(models.Model):
     question = models.ForeignKey(Question,related_name='comments')
-
+    author_comment = models.ForeignKey(settings.AUTH_USER_MODEL,default=None)
     content = models.CharField(max_length=128,null=True,blank=False)
     is_valid = models.BooleanField(default=False)
     timestamp_comment = models.DateTimeField(auto_now_add=True)

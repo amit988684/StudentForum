@@ -30,7 +30,8 @@
             <h1>{{ question.title }}</h1>
             <div class="date">
                 <p>Published on: {{ question.timestamp|date:"D M Y"}}</p>
-                <p>User : {{ user.u }}</p>
+                <!--Name-->
+                <p>User : {{ question.author.name }}</p>
             </div>
 {#            <a href="{% url 'question_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>#}
         </div>

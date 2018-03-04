@@ -23,6 +23,7 @@ TEMPLATES = [
         'DIRS': [
             join(BASE_DIR, 'templates'),
             # insert more TEMPLATE_DIRS here
+            join(BASE_DIR, 'forumapp/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
