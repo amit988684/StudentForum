@@ -9,6 +9,7 @@ class CommentForm(forms.ModelForm):
 
 
 class QuestionForm(forms.ModelForm):
+    content = forms.CharField(max_length=1000,widget=forms.Textarea)
     class Meta:
         model = Question
         fields = ('title', 'content',)

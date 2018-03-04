@@ -24,7 +24,7 @@ class Question(models.Model):
     # Cannot DO ? ????????????????????????????????
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
     title = models.CharField(max_length=100)
-    content = models.CharField(max_length=256,null=True)
+    content = models.CharField(max_length=1000,null=True)
     # liked = models.ManyToManyField(Profile,blank=True,related_name='liked')
     timestamp = models.DateTimeField(auto_now_add=True)
 
@@ -37,8 +37,8 @@ class Question(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('forumapp:question_list')
-#        # return reverse('forumapp:question_new')
+        return reverse('forumapp:question_new')
+#        # return reverse('forumapp:question_list')
         #  Changed to redirect the website after
         # submitting the question form to the same form
         # ... so that iframe can be used
@@ -50,7 +50,7 @@ class Question(models.Model):
 class Comment(models.Model):
     question = models.ForeignKey(Question,related_name='comments')
     author_comment = models.ForeignKey(settings.AUTH_USER_MODEL,default=None)
-    content = models.CharField(max_length=128,null=True,blank=False)
+    content = models.CharField(max_length=1000,null=True,blank=False)
     is_valid = models.BooleanField(default=False)
     timestamp_comment = models.DateTimeField(auto_now_add=True)
 

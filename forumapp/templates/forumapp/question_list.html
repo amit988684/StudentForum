@@ -6,20 +6,42 @@
 
 {% block title %}{{ block.super }}Forum{% endblock %}
 
-
+{#    {% block extrahead %}#}
+{#    <meta http-equiv="refresh" content="1"/>#}
+{#{% endblock %}#}
 {% block container %}
-{#The Cover Type On the Top#}
 
+
+{#The Cover Type On the Top has the form#}
+
+<br><br><br>
+
+    <!-- For the click and open a collapsing bar effect-->
+<center>
+{#<div class="btn-group">#}
+{#  <button style="width: 100%" type="button" class="btn btn-danger">Have A Question ?? </button>#}
+  <button style="width: 50%" type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">
+   Have A Question ??  <span class="glyphicon glyphicon-arrow-down"></span>
+  </button>
+{#</div>#}
+</center>
+
+<div id="demo" class="collapse">    <!-- For the click and open a collapsing bar effect-->
+
+<!-- Form -->
 <div class="container profile-head">
   <div class="row">
     <div class="col-sm-10">
         <!-- Functionality added in Iframe -->
-        <center><iframe src="{% url "forumapp:question_new" %}" style="border:2px solid grey;text-align: center" width="300" height="200"></iframe></center>
+        <center><iframe src="{% url "forumapp:question_new" %}" style="border:2px solid grey;text-align: center;" width="1125" height="550" ></iframe></center>
     </div>
   </div>
 </div>
-{#End  of the Cover #}
+</div>      <!-- End of div  :       For the click and opening : a collapsing bar effect-->
 
+{#</div>#}
+
+<hr style="border: solid;">
 
 <div class="container profile-body">
   <div class="row">
@@ -29,11 +51,13 @@
         <div class="jumbotron" style="width: 1000px;">
 {#Question #}
             <h1>{{ question.title }}</h1>
+            <h3>{{ question.content }}</h3>
+
             <div class="date">
-                <p>Published on: {{ question.timestamp|date:"D M Y"}}
-                {{ question.timestamp|timesince}} ago</p>
+                <p>Published on: {{ question.timestamp|date:"D M Y"}}  -
+                {{ question.timestamp|timesince}} ago - {{ question.timestamp|time}}</p>
                 <!--Name-->
-                <p>User : {{ question.author.name }}</p>
+                <p>By :@{{ question.author.name }} </p>
             </div>
 {#            <a href="{% url 'question_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>#}
         </div>
@@ -41,4 +65,6 @@
     </div>
   </div>
 </div>
-{% endblock %}
+
+
+{% endblock container %}
