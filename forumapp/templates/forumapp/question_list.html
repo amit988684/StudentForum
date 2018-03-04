@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% load thumbnail %}
+
+
+{% block title %}{{ block.super }}Forum{% endblock %}
+
+
+{% block container %}
+{#The Cover Type On the Top#}
+
+<div class="container profile-head">
+  <div class="row">
+    <div class="col-sm-10">
+
+    </div>
+  </div>
+</div>
+{#End  of the Cover #}
+
+
+<div class="container profile-body">
+  <div class="row">
+    <div class="col-sm-4">
+
+    {% for question in question_list %}
+        <div class="jumbotron">
+{#Question #}
+            <h1>{{ question.title }}</h1>
+            <div class="date">
+                <p>Published on: {{ question.timestamp|date:"D M Y"}}</p>
+                <p>User : {{ user.u }}</p>
+            </div>
+{#            <a href="{% url 'question_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>#}
+        </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
