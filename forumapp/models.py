@@ -38,6 +38,10 @@ class Question(models.Model):
 
     def get_absolute_url(self):
         return reverse('forumapp:question_list')
+#        # return reverse('forumapp:question_new')
+        #  Changed to redirect the website after
+        # submitting the question form to the same form
+        # ... so that iframe can be used
 
     class Meta:
         ordering = ['-timestamp']
