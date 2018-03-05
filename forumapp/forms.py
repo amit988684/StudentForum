@@ -22,7 +22,6 @@ def block_offensive_words(value):
             raise forms.ValidationError("You Cannot post with BAD WORDS")
 
 
-
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
