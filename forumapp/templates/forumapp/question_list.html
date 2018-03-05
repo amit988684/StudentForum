@@ -50,7 +50,7 @@
     {% for question in question_list %}
         <div class="jumbotron" style="width: 1000px;">
 {#Question #}
-            <h1>{{ question.title }}</h1>
+            <a href="{% url 'forumapp:question_detail' pk=question.pk %}"><h1>{{ question.title }}</h1></a>
             <h3>{{ question.content }}</h3>
 
             <div class="date">

@@ -7,4 +7,32 @@
 
 {% block container %}
 
+      <h1>{{ question.title }}</h1>
+
+        {% if question.timestamp %}
+
+<div class="container profile-body">
+  <div class="row">
+             <div class="col-sm-4">
+            <div class="jumbotron ">
+            <h1>{{ question.author.name }}</h1>
+
+        <p>{{ question.content|safe|linebreaksbr }}</p>
+
+                {{ question.timestamp }}
+        {% endif %}
+</div></div>
+</div>
+</div>
+{#          {% if user.is_authenticated %}#}
+{#          <a class="btn btn-primary" href="{% url 'question_edit' pk=question.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>#}
+{#          <a class="btn btn-primary" href="{% url 'question_remove' pk=question.pk %}"><span class="glyphicon glyphicon-remove"></span></a>#}
+{#      {% endif %}#}
+
+{#      <hr>#}
+{#  <a class="btn btn-primary btn-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>#}
+{#  <div class="container">#}
+
+
+
 {% endblock container %}

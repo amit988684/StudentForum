@@ -7,6 +7,19 @@ from crispy_forms.bootstrap import AppendedText, PrependedText, FormActions
 from authtools import forms as authtoolsforms
 from django.contrib.auth import forms as authforms
 from django.core.urlresolvers import reverse
+# My Imports
+from django.core import validators
+
+
+# My Edit Validator
+
+
+def check_college_id(value):
+    domain = 'iiitk.ac.in'
+    t = value.split('@')
+    if domain not in t:
+        raise forms.ValidationError("Not A College Email Id !!")
+# End Of My validator
 
 
 class LoginForm(AuthenticationForm):
@@ -29,7 +42,7 @@ class LoginForm(AuthenticationForm):
 
 
 class SignupForm(authtoolsforms.UserCreationForm):
-
+    email = forms.EmailField(max_length=50,validators=[check_college_id,])
     def __init__(self, *args, **kwargs):
         super(SignupForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
