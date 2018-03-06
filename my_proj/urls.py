@@ -14,7 +14,11 @@ urlpatterns = [
     url(r'^users/', include(profiles.urls, namespace='profiles')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include(accounts.urls, namespace='accounts')),
+
+    # My App
     url(r'forumapp/', include(forumapp.urls, namespace='forumapp')),
+
+    # Google Auth
     url(r'^auth/', include('social_django.urls', namespace='social'))
 
 ]

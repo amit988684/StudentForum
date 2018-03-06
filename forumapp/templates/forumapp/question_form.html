@@ -6,8 +6,15 @@
 {% block navbar %}
 {% endblock %}
 
-{% block container %}
 
+    {% block extrahead %}
+{#    <meta http-equiv="refresh" content="1"/>#}
+        <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+        <link rel="stylesheet" href="{% static "css/forum_base.css" %}">
+{% endblock %}
+
+{% block container %}
+{#    <style>.temporary{background-image: url("/forumapp/static/forum_bag.jpg"); }</style>#}
 {% block form %}
     <div class="container form-box">
 <center>

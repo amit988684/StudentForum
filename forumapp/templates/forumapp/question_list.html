@@ -6,11 +6,12 @@
 
 {% block title %}{{ block.super }}Forum{% endblock %}
 
-{#    {% block extrahead %}#}
+    {% block extrahead %}
 {#    <meta http-equiv="refresh" content="1"/>#}
-{#{% endblock %}#}
+        <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+        <link rel="stylesheet" href="{% static "css/forum_base.css" %}">
+{% endblock %}
 {% block container %}
-
 
 {#The Cover Type On the Top has the form#}
 
@@ -41,30 +42,54 @@
 
 {#</div>#}
 
-<hr style="border: solid;">
-
-<div class="container profile-body">
+<hr style="border-color: black;" class="col-sm-12">
+{#<div class="">#}
+<div class="container profile-body new-decided">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-11">
 
     {% for question in question_list %}
-        <div class="jumbotron" style="width: 1000px;">
+        <div class="jumbotron" style="border: groove;">
 {#Question #}
-            <a href="{% url 'forumapp:question_detail' pk=question.pk %}"><h1>{{ question.title }}</h1></a>
+
+
+
+            <!-- Profile Image -->
+
+   <div class="row" style="margin-left: -50px;margin-top: 0px">
+      <div class="row2">
+          <!-- Taking User To The profile page of the author of the post-->
+        <a href="{% url "profiles:show" slug=question.author.profile.slug %}"><div class="col-md-1"> <img title="profile picture" class="img-circle img-responsive" src="{% thumbnail question.author.profile.picture|default:'default_profile.png' 60x60 crop %}">
+               </div>
+               </a>
+
+                <p><h2><strong style="color: #de0c00">Q-</strong>
+                <a href="{% url 'forumapp:add_comment_to_question' pk=question.pk %}">{{ question.title }}</a></h2></p>
+
+
+      </div>
+  </div>
+{#            <a href="{% url 'forumapp:question_detail' pk=question.pk %}"><p><h2>{{ question.title }}</h2></a></p>#}
+
+{# having the read more button#}
             <h3>{{ question.content }}</h3>
+  <p class="read-more"><a href="{% url "forumapp:question_detail" pk=question.pk %}" class="button">Answers</a></p>
+
 
             <div class="date">
-                <p>Published on: {{ question.timestamp|date:"D M Y"}}  -
-                {{ question.timestamp|timesince}} ago - {{ question.timestamp|time}}</p>
-                <!--Name-->
-                <p>By :@{{ question.author.name }} </p>
+                Published on__{{ question.timestamp|date }}  -
+                {{ question.timestamp|timesince}} ago - {{ question.timestamp|time}}
+                <!--Name--><br>
+                By :  {{ question.author.name.capitalize }}
             </div>
+
 {#            <a href="{% url 'question_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>#}
         </div>
     {% endfor %}
     </div>
   </div>
 </div>
+
 
 
 {% endblock container %}

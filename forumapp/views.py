@@ -50,14 +50,20 @@ class QuestionDeleteView(LoginRequiredMixin,DeleteView):
     model = Question
     success_url = reverse_lazy('question_list')
 
+# Comments CRUD
 
-# COMMENT CRUD
-# @login_required
-# def add_comment_to_Question(request,pk):
-#     post = get_object_or_404(Question,pk=pk)
-#     if request.method == 'POST':
-#         form = CommentForm(request.POST)
-#
-#         if form.is_valid():
-#             comment = form.save(commit=False)
 
+@login_required
+def add_comment_to_question(request, pk):
+    question = get_object_or_404(Question, pk=pk)
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.question = question             # assign the comment to the question which he commented
+            comment.author_comment = request.user   # assign each comment to the user who commented it ...
+            comment.save()
+            return redirect('forumapp:question_detail', pk=question.pk)
+    else:
+        form = CommentForm()
+    return render(request, 'forumapp/comment_form.html', {'form': form})

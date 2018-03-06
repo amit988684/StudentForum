@@ -13,4 +13,7 @@ urlpatterns = [
     url(r'^question/new/$', views.QuestionCreateView.as_view(), name='question_new'),
     url(r'^question/(?P<pk>\d+)/edit/$', views.QuestionUpdateView.as_view(), name='question_edit'),
     url(r'^question/(?P<pk>\d+)/remove/$', views.QuestionDeleteView.as_view(), name='question_remove'),
+
+    # Comments :
+    url(r'^question/(?P<pk>\d+)/comment/$', views.add_comment_to_question, name='add_comment_to_question'),
 ]
