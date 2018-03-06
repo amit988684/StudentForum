@@ -39,8 +39,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
 
                 # Added Bt Me
-                'social.apps.django_app.context_processors.backends',
-                'social.apps.django_app.context_processors.login_redirect',
+                # 'social.apps.django_app.context_processors.backends',
+                # 'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -85,8 +85,8 @@ INSTALLED_APPS = (
 
     # My Added
     'forumapp',
-    'social.apps.django_app.default',
-    'social_django',
+    # 'social.apps.django_app.default',
+    # 'social_django',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -149,7 +149,9 @@ LOGIN_URL = reverse_lazy("accounts:login")
 THUMBNAIL_EXTENSION = 'png'     # Or any extn for your thumbnails
 
 
+################################################################################
 # My Added #####################################################################
+# FOr Social Login##############################################################
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.open_id.OpenIdAuth',  # for Google authentication
     'social_core.backends.google.GoogleOpenId',  # for Google authentication
@@ -162,3 +164,7 @@ AUTHENTICATION_BACKENDS = (
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '365081772682-um9ctc90c5g9a7n63l3drhhmeqlvgvk8.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'tGur-f8jM7wHO-pL3uNsYqLv'
+
+
+################################################################################
+# For Mail Sending

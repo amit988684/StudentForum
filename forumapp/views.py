@@ -42,13 +42,14 @@ class QuestionCreateView(LoginRequiredMixin,CreateView):
 class QuestionUpdateView(LoginRequiredMixin,UpdateView):
     model = Question
     form_class = QuestionForm
-    redirect_field_name = "forumapp/question_detail.html"
-    #     login_url = '/login/'
+    redirect_field_name = "forumapp/question_list.html"
+    login_url = '/login/'
 
 
 class QuestionDeleteView(LoginRequiredMixin,DeleteView):
     model = Question
-    success_url = reverse_lazy('question_list')
+    success_url = reverse_lazy('forumapp:question_list')
+
 
 # Comments CRUD
 

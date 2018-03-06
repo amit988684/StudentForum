@@ -28,6 +28,9 @@ class QuestionForm(forms.ModelForm):
     class Meta:
         model = Question
         fields = ('title', 'content',)
+        widgets = {'vision': forms.Textarea(attrs={'rows': 6,
+                                                   'cols': 22,
+                                                   'resize': 'none'}),}
 
 
 class CommentForm(forms.ModelForm):

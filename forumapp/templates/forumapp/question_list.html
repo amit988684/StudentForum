@@ -66,6 +66,12 @@
                 <p><h2><strong style="color: #de0c00">Q-</strong>
                 <a href="{% url 'forumapp:add_comment_to_question' pk=question.pk %}">{{ question.title }}</a></h2></p>
 
+          <!-- Added Delete And Edit Functionality to the Questions-->
+          {% if question.author.profile.user == user %}
+          <a class="btn btn-default" href="{% url 'forumapp:question_edit' pk=question.pk %}">Edit?</a>
+          <a class="btn btn-danger" href="{% url 'forumapp:question_remove' pk=question.pk %}">Delete?</a>
+{% endif %}
+
 
       </div>
   </div>
