@@ -68,3 +68,11 @@ def add_comment_to_question(request, pk):
     else:
         form = CommentForm()
     return render(request, 'forumapp/comment_form.html', {'form': form})
+
+
+@login_required
+def comment_remove(request, pk):
+    comment = get_object_or_404(Comment, pk=pk)
+    question_pk = comment.question.pk
+    comment.delete()
+    return redirect('forumapp:question_detail', pk=question_pk)

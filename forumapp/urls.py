@@ -16,4 +16,6 @@ urlpatterns = [
 
     # Comments :
     url(r'^question/(?P<pk>\d+)/comment/$', views.add_comment_to_question, name='add_comment_to_question'),
+    url(r'^comment/(?P<pk>\d+)/remove/$', views.comment_remove, name='comment_remove'),
+
 ]

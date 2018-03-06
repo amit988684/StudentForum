@@ -29,20 +29,21 @@
                 {{ question.timestamp }}
         {% endif %}
 </div></div>
-  <div class="row">
-             <div class="col-sm-12">
-            <div class="jumbotron ">
-            <h1>{{ question.author.name }}</h1>
-
-        <p>{{ question.content|safe|linebreaksbr }}</p>
-
-                {{ question.timestamp }}
-
-</div></div>
-
 
 </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron">
+            {% for comments in question.comments.all %}
+{{ comments.content }}<br>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
 </div>
+
+
 
 
 
