@@ -3,3 +3,4 @@
 
 {# I Edited It #}
 <li {% if active_link == "Forum" %}class="active"{% endif %}><a href="{% url 'forumapp:question_list' %}">Forum</a></li>
+<li {% if active_link == "Developer" %}class="active"{% endif %}><a href="{% url 'profiles:all_user' %}">Developer</a></li>
