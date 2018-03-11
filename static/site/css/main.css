@@ -116,12 +116,12 @@ body>.navbar-transparent {
 
 /* About page styling */
 #sec1 {
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJklEQVQIW2NkAIILFy78NzAwYATRjCABZEGwAEwFiA1WBlIOUwkA72gTdDIYVO4AAAAASUVORK5CYII=) repeat;
+    background:url("/static/ubuntu.jpg") repeat;
 }
 
 /* Profile page styling */
 .profile-head {
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJklEQVQIW2NkAIILFy78NzAwYATRjCABZEGwAEwFiA1WBlIOUwkA72gTdDIYVO4AAAAASUVORK5CYII=) repeat;
+    background:url("/static/ubuntu.jpg") repeat;
     padding: 70px 0px 30px 20px;
 }
 .profile-body {
