@@ -64,7 +64,7 @@ def add_comment_to_question(request, pk):
             comment.question = question             # assign the comment to the question which he commented
             comment.author_comment = request.user   # assign each comment to the user who commented it ...
             comment.save()
-            return redirect('forumapp:question_detail', pk=question.pk)
+            return redirect('forumapp:add_comment_to_question', pk=question.pk)
     else:
         form = CommentForm()
     return render(request, 'forumapp/comment_form.html', {'form': form})

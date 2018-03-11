@@ -35,10 +35,11 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="jumbotron">
-            <iframe src="{% url "forumapp:add_comment_to_question" pk=question.pk %}" height="150px" width="1000"></iframe>
+            <iframe src="{% url "forumapp:add_comment_to_question" pk=question.pk %}" height="150px" width="1000" style="border: transparent"></iframe>
             {% for comments in question.comments.all %}
-                <div class="jumbotron-fluid">
+                <div class="jumbotron">
 {{ comments.content }}<br>
+{{ comments.author_comment }}
                 </div>
             {% endfor %}
             </div>

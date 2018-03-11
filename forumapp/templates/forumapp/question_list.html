@@ -28,7 +28,6 @@
 </center>
 
 <div id="demo" class="collapse">    <!-- For the click and open a collapsing bar effect-->
-
 <!-- Form -->
 <div class="container profile-head">
   <div class="row">
@@ -52,20 +51,24 @@
         <div class="jumbotron" style="border: groove;">
 {#Question #}
 
-
-
             <!-- Profile Image -->
 
    <div class="row" style="margin-left: -50px;margin-top: 0px">
       <div class="row2">
           <!-- Taking User To The profile page of the author of the post-->
+       <div class="col-md-10">
         <a href="{% url "profiles:show" slug=question.author.profile.slug %}"><div class="col-md-1"> <img title="profile picture" class="img-circle img-responsive" src="{% thumbnail question.author.profile.picture|default:'default_profile.png' 60x60 crop %}">
                </div>
                </a>
 
-                <p><h2><strong style="color: #de0c00">Q-</strong>
-                <a href="{% url 'forumapp:add_comment_to_question' pk=question.pk %}">{{ question.title }}</a></h2></p>
 
+{#          <strong style="color: #de0c00">Q-</strong>#}
+
+{#        <div class="s1"></div>#}
+                <p><h2>
+                <a href="{% url 'forumapp:question_detail' pk=question.pk %}">{{ question.author.name }}</a></h2>
+                <a href="{% url 'forumapp:question_detail' pk=question.pk %}">{{ question.author.email }}</a></p>
+</div>
           <!-- Added Delete And Edit Functionality to the Questions-->
           {% if question.author.profile.user == user %}
           <a class="btn btn-success" href="{% url 'forumapp:question_edit' pk=question.pk %}">Edit?</a>
@@ -95,7 +98,6 @@
     </div>
   </div>
 </div>
-
 
 
 {% endblock container %}
