@@ -42,7 +42,7 @@ class QuestionCreateView(LoginRequiredMixin,CreateView):
 class QuestionUpdateView(LoginRequiredMixin,UpdateView):
     model = Question
     form_class = QuestionForm
-    redirect_field_name = "forumapp/question_list.html"
+    success_url = reverse_lazy("forumapp:question_list")
     login_url = '/login/'
 
 

@@ -68,7 +68,7 @@
 
           <!-- Added Delete And Edit Functionality to the Questions-->
           {% if question.author.profile.user == user %}
-          <a class="btn btn-default" href="{% url 'forumapp:question_edit' pk=question.pk %}">Edit?</a>
+          <a class="btn btn-success" href="{% url 'forumapp:question_edit' pk=question.pk %}">Edit?</a>
           <a class="btn btn-danger" href="{% url 'forumapp:question_remove' pk=question.pk %}">Delete?</a>
 {% endif %}
 
