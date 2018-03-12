@@ -12,44 +12,109 @@
         <link rel="stylesheet" href="{% static "css/forum_base.css" %}">
 {% endblock %}
 
+{% block navbar-left %}
+
+    <li {% if active_link == "Forum" %}class="active"{% endif %}><a style="color: green" href="{% url 'forumapp:question_list' %}">Forum</a></li>
+
+{% endblock %}
+
 {% block container %}
-
-      <h1>{{ question.title }}</h1>
-
-        {% if question.timestamp %}
-
+<br><br><br><br>
 <div class="container profile-body">
   <div class="row">
-             <div class="col-sm-12">
-            <div class="jumbotron ">
-            <h1>{{ question.author.name }}</h1>
+    <div class="col-sm-11">
 
-        <p>{{ question.content|safe|linebreaksbr }}</p>
+            <div class="jumbotron col-sm-12" style="border: ridge;">
+{#Question #}
 
-                {{ question.timestamp }}
-        {% endif %}
+            <!-- Profile Image -->
+
+   <div class="row" style="margin-left: -50px;margin-top: 0px">
+      <div class="row2">
+          <!-- Taking User To The profile page of the author of the post-->
+       <div class="col-md-10">
+        <a href="{% url "profiles:show" slug=question.author.profile.slug %}"><div class="col-md-2"> <img title="View Profile" class="img-circle img-responsive" src="{% thumbnail question.author.profile.picture|default:'default_profile.png' 60x60 crop %}">
+               </div>
+               </a>
+
+                <p>
+                <strong><a title="Author Name" style="color: green;" href="{% url "profiles:show" slug=question.author.profile.slug %}">{{ question.author.name.capitalize }}</a></strong><br>
+
+                <a title="Author Email" style="color: black;font-size: medium" href="{% url "profiles:show" slug=question.author.profile.slug %}">{{ question.author.email.capitalize }}</a></p>
+</div>
+          <!-- Added Delete And Edit Functionality to the Questions-->
+          {% if question.author.profile.user == user %}
+          <a title="Edit Question ?" class="btn btn-success" href="{% url 'forumapp:question_edit' pk=question.pk %}">Edit?</a>
+          <a title="Delete Question" class="btn btn-danger" href="{% url 'forumapp:question_remove' pk=question.pk %}">Delete?</a>
+{% endif %}
+
+
+      </div>
+  </div>
+{#            <a href="{% url 'forumapp:question_detail' pk=question.pk %}"><p><h2>{{ question.title }}</h2></a></p>#}
+
+{# having the read more button#}
+            <h3>{{ question.content }}</h3>
+{#  <p class="read-more"><a title="Answer Question" href="{% url "forumapp:question_detail" pk=question.pk %}" class="btn btn-block" style="border-bottom-left-radius: 20%;border-bottom: ridge;border-bottom-right-radius: 20%;">Answer ?</a></p>#}
+
+    <hr class="jumbotron-fluid">
+            <div class="date" style="text-align: end;">
+                <strong style="color: red">Published on </strong> :  {{ question.timestamp|date }}  -
+                {{ question.timestamp|timesince}} ago - {{ question.timestamp|time}}
+                <!--Name--><br>
+              <strong style="color: green">  By :  {{ question.author.name.capitalize }}</strong>
+            </div>
+
+{#            <a href="{% url 'question_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>#}
+        </div>
+
+
+
 </div></div>
 
-</div>
+
+
+
+{#      <h1>{{ question.title }}</h1>#}
+
+{#        {% if question.timestamp %}#}
+
+{#<div class="container profile-body">#}
+{#  <div class="row">#}
+{#             <div class="col-sm-12">#}
+{#            <div class="jumbotron">#}
+{#                    <a href="{% url "profiles:show" slug=question.author.profile.slug %}"><div class="col-md-1"> <img title="profile picture" class="img-circle img-responsive" src="{% thumbnail question.author.profile.picture|default:'default_profile.png' 60x60 crop %}">#}
+{#               </div>#}
+{#               </a>#}
+{##}
+{#            <p>{{ question.author.name }}</p>#}
+{##}
+{#        <p>{{ question.content|safe|linebreaksbr }}</p>#}
+{##}
+{#                {{ question.timestamp }}#}
+{#        {% endif %}#}
+{#</div></div>#}
+{##}
+{#</div>#}
 
     <div class="row">
-        <div class="col-sm-12">
-            <div class="jumbotron">
-            <iframe src="{% url "forumapp:add_comment_to_question" pk=question.pk %}" height="150px" width="1000" style="border: transparent"></iframe>
-            {% for comments in question.comments.all %}
-                <div class="jumbotron">
-{{ comments.content }}<br>
-{{ comments.author_comment }}
-                </div>
-            {% endfor %}
+        <div class="col-sm-11">
+            <div class="jumbotron" style="height: 200px">
+            <iframe class="col-sm-12" src="{% url "forumapp:add_comment_to_question" pk=question.pk %}" style="border: transparent"></iframe>
+{#            {% for comments in question.comments.all %}#}
+{#                <div class="jumbotron">#}
+{#{{ comments.content }}<br>#}
+{#{{ comments.author_comment }}#}
+{#                </div>#}
+{#            {% endfor %}#}
             </div>
         </div>
     </div>
+{#</div>#}
+
+
+
 </div>
-
-
-
-
 
 
 {#          {% if user.is_authenticated %}#}

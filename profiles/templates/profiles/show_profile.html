@@ -39,8 +39,8 @@
 {#       Self made                     #}
 
           {% if show_user.profile.contact %} <li class="list-group-item text-right"><span class="pull-left"><strong>Contact</strong></span> {{ show_user.profile.contact }}</li>{% endif %}
-       {% if show_user.profile.github %} <li class="list-group-item text-right"><span class="pull-left"><strong>Github</strong></span> {{ show_user.profile.github }}</li>{% endif %}
-        {% if show_user.profile.linkedin %}<li class="list-group-item text-right"><span class="pull-left"><strong>Linkedin</strong></span> {{ show_user.profile.linkedin }}</li>{% endif %}
+       {% if show_user.profile.github %} <li class="list-group-item text-right"><span class="pull-left"><strong>Github</strong></span><a href="{{ show_user.profile.github }}">{{ show_user.profile.github }}</a></li>{% endif %}
+        {% if show_user.profile.linkedin %}<li class="list-group-item text-right"><span class="pull-left"><strong>Linkedin</strong></span> <a href="{{ show_user.profile.linkedin }}">{{ show_user.profile.linkedin }}</a></li>{% endif %}
       </ul>
     </div>
     <div class="col-sm-8">
@@ -60,8 +60,7 @@
 	 <strong>Bio</strong>: {{ show_user.profile.bio }}
     <br>          <strong>Department</strong>: {{ show_user.profile.depart }}
 
-  {% if show_user.profile.course is not null %}
-      <br>
+  {% if show_user.profile.course is not null %}  <br>
       <strong>Course</strong>: <ul>{% for c in show_user.profile.course.all %}<li>{{ c.course_id }}-{{ c.course_name }}</li>{% endfor %}</ul>{% endif %}
                         {#            <br>          <strong>Resume</strong>:<a href="{{ show_user.profile.resume.url }}"> <embed src="{{ show_user.profile.resume.url }}" width="500" height="375" type='application/pdf'>{{ show_user.profile.resume }}</embed></a>#}
 

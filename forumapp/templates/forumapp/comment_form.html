@@ -15,9 +15,9 @@
     <form method="POST">
     {% csrf_token %}
     {{form|crispy}}
-        <div class="button" style="padding-left: 82%">
-    <button type="submit" class="save btn btn-success">Post Comment</button>
-            </div>
+
+    <button type="submit" class="save btn btn-success col-md-10">Post Comment</button>
+
     </form>
 </div>
 {#    <script>var editor = new MediumEditor('.editable');</script>#}

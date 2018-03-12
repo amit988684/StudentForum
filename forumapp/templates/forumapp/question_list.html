@@ -21,7 +21,7 @@
 <center>
 {#<div class="btn-group">#}
 {#  <button style="width: 100%" type="button" class="btn btn-danger">Have A Question ?? </button>#}
-  <button style="width: 50%" type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">
+  <button style="width: 50%;border-bottom-left-radius: 50px;border-bottom-right-radius: 50px;border-bottom-width: 10px;border-bottom-color: darkgray;" type="button" class="btn btn-block" data-toggle="collapse" data-target="#demo">
    Have A Question ??  <span class="glyphicon glyphicon-arrow-down"></span>
   </button>
 {#</div>#}
@@ -48,31 +48,29 @@
     <div class="col-sm-11">
 
     {% for question in question_list %}
-        <div class="jumbotron" style="border: groove;">
+
+        <div class="jumbotron col-sm-12 container" style="border: ridge;">
 {#Question #}
 
             <!-- Profile Image -->
 
-   <div class="row" style="margin-left: -50px;margin-top: 0px">
+   <div class="row" style="margin-left: -50px;">
       <div class="row2">
           <!-- Taking User To The profile page of the author of the post-->
        <div class="col-md-10">
-        <a href="{% url "profiles:show" slug=question.author.profile.slug %}"><div class="col-md-1"> <img title="profile picture" class="img-circle img-responsive" src="{% thumbnail question.author.profile.picture|default:'default_profile.png' 60x60 crop %}">
+        <a href="{% url "profiles:show" slug=question.author.profile.slug %}"><div class="col-md-2" onclick="alert('opening_profile')"> <img title="View Profile" class="img-circle img-responsive" src="{% thumbnail question.author.profile.picture|default:'default_profile.png' 60x60 crop %}">
                </div>
                </a>
 
+                <p>
+                <strong><a title="Author Name" style="color: green;" href="{% url "profiles:show" slug=question.author.profile.slug %}">{{ question.author.name.capitalize }}</a></strong><br>
 
-{#          <strong style="color: #de0c00">Q-</strong>#}
-
-{#        <div class="s1"></div>#}
-                <p><h2>
-                <a href="{% url 'forumapp:question_detail' pk=question.pk %}">{{ question.author.name }}</a></h2>
-                <a href="{% url 'forumapp:question_detail' pk=question.pk %}">{{ question.author.email }}</a></p>
+                <a title="Author Email" style="color: black;font-size: medium" href="{% url "profiles:show" slug=question.author.profile.slug %}">{{ question.author.email.capitalize }}</a></p>
 </div>
           <!-- Added Delete And Edit Functionality to the Questions-->
           {% if question.author.profile.user == user %}
-          <a class="btn btn-success" href="{% url 'forumapp:question_edit' pk=question.pk %}">Edit?</a>
-          <a class="btn btn-danger" href="{% url 'forumapp:question_remove' pk=question.pk %}">Delete?</a>
+          <a title="Edit Question ?" class="btn btn-success" href="{% url 'forumapp:question_edit' pk=question.pk %}">Edit?</a>
+          <a title="Delete Question" class="btn btn-danger" href="{% url 'forumapp:question_remove' pk=question.pk %}">Delete?</a>
 {% endif %}
 
 
@@ -81,21 +79,25 @@
 {#            <a href="{% url 'forumapp:question_detail' pk=question.pk %}"><p><h2>{{ question.title }}</h2></a></p>#}
 
 {# having the read more button#}
-            <h3>{{ question.content }}</h3>
-  <p class="read-more"><a href="{% url "forumapp:question_detail" pk=question.pk %}" class="button">Answers</a></p>
+        <div class="container">
+<p class="lead">{{ question.content }}</p>
+</div>
+  <p class="read-more"><a title="Answer Question" href="{% url "forumapp:question_detail" pk=question.pk %}" class="btn btn-block" style="border-bottom-left-radius: 20%;border-bottom: ridge;border-bottom-right-radius: 20%;">Answer ?</a>
+  </p>
 
-
-            <div class="date">
-                Published on__{{ question.timestamp|date }}  -
+    <hr class="jumbotron-fluid">
+            <div class="date" style="text-align: end;">
+                <strong style="color: red">Published on </strong> :  {{ question.timestamp|date }}  -
                 {{ question.timestamp|timesince}} ago - {{ question.timestamp|time}}
                 <!--Name--><br>
-                By :  {{ question.author.name.capitalize }}
+              <strong style="color: green">  By :  {{ question.author.name.capitalize }}</strong>
             </div>
 
 {#            <a href="{% url 'question_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>#}
         </div>
     {% endfor %}
     </div>
+{#  </div></div>#}
   </div>
 </div>
 
