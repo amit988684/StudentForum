@@ -60,7 +60,9 @@
 	 <strong>Bio</strong>: {{ show_user.profile.bio }}
     <br>          <strong>Department</strong>: {{ show_user.profile.depart }}
 
-  {% if show_user.profile.course is not null %}  <br>          <strong>Course</strong>: <ul>{% for c in show_user.profile.course.all %}<li>{{ c.course_id }}-{{ c.course_name }}</li>{% endfor %}</ul>{% endif %}
+  {% if show_user.profile.course is not null %}
+      <br>
+      <strong>Course</strong>: <ul>{% for c in show_user.profile.course.all %}<li>{{ c.course_id }}-{{ c.course_name }}</li>{% endfor %}</ul>{% endif %}
                         {#            <br>          <strong>Resume</strong>:<a href="{{ show_user.profile.resume.url }}"> <embed src="{{ show_user.profile.resume.url }}" width="500" height="375" type='application/pdf'>{{ show_user.profile.resume }}</embed></a>#}
 
     {% if show_user.profile.resume %}<br><strong>Resume</strong>:<a href="{{ show_user.profile.resume.url }}">{{ show_user.profile.resume }}</a>{% endif %}
