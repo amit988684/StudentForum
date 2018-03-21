@@ -16,7 +16,8 @@
     {% csrf_token %}
     {{form|crispy}}
 
-    <button type="submit" class="save btn btn-success col-md-10">Post Comment</button>
+        <!-- to reload the parent window .i.e. the question_detail-->
+    <button onclick="window.parent.location.reload()" type="submit" class="save btn btn-success col-md-10">Post Comment</button>
 
     </form>
 </div>

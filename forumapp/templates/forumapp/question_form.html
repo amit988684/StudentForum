@@ -24,7 +24,8 @@
     <form method="POST" class="post-form">
     {% csrf_token %}
     {{ form|crispy }}
-    <button type="submit" class="save btn btn-primary">Save</button>
+        <!-- to reload the parent window ( from the question_list.html the iframe is called ) to automatically reload that window when this form submits : we use onclick-->
+    <button onclick="window.parent.location.href = '{% url "forumapp:question_list" %}' " type="submit" class="save btn btn-primary">Save</button>
     </form>
         </article>
 

@@ -11,8 +11,9 @@
         <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
         <link rel="stylesheet" href="{% static "css/forum_base.css" %}">
 {% endblock %}
-{% block container %}
 
+{% block container %}
+<div style="background-image: url('https://modytt.files.wordpress.com/2011/08/blog-background.jpg');background-attachment: fixed;">
 {#The Cover Type On the Top has the form#}
 
 <br><br><br>
@@ -27,21 +28,28 @@
 {#</div>#}
 </center>
 
+
+
+<!--_____________________________________________________________________________________________-->
+
 <div id="demo" class="collapse">    <!-- For the click and open a collapsing bar effect-->
 <!-- Form -->
-<div class="container profile-head">
+<div class="container">
   <div class="row">
     <div class="col-sm-10">
         <!-- Functionality added in Iframe -->
-        <center><iframe src="{% url "forumapp:question_new" %}" style="border:2px solid grey;text-align: center;" width="1125" height="550" ></iframe></center>
+        <center><iframe onsubmit="window.location.reload()" src="{% url "forumapp:question_new" %}" style="border:10px solid black;text-align: center;" width="1125" height="550" ></iframe></center>
     </div>
   </div>
 </div>
 </div>      <!-- End of div  :       For the click and opening : a collapsing bar effect-->
 
+<!--_____________________________________________________________________________________________-->
+
+
 {#</div>#}
 
-<hr style="border-color: black;" class="col-sm-12">
+<hr style="border-color: black; border-width: 10px" class="col-md-11.5">
 {#<div class="">#}
 <div class="container profile-body new-decided">
   <div class="row">
@@ -101,5 +109,5 @@
   </div>
 </div>
 
-
+</div>
 {% endblock container %}

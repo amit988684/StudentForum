@@ -99,15 +99,34 @@
 
     <div class="row">
         <div class="col-sm-11">
-            <div class="jumbotron" style="height: 200px">
+
+
+
+
+
+
+            <div class="jumbotron" style="height: 250px;border: ridge">
+
             <iframe class="col-sm-12" src="{% url "forumapp:add_comment_to_question" pk=question.pk %}" style="border: transparent"></iframe>
-{#            {% for comments in question.comments.all %}#}
-{#                <div class="jumbotron">#}
-{#{{ comments.content }}<br>#}
-{#{{ comments.author_comment }}#}
-{#                </div>#}
-{#            {% endfor %}#}
+
             </div>
+        </div>
+    </div>
+
+    <div type="row">
+        <div class="col-sm-11">
+
+        {% for comments in question.comments.all %}
+        <div class="jumbotron" style="border: ridge">
+
+
+<a href="{% url "profiles:show" slug=comments.author_comment.profile.slug %}"><div class="col-md-2"> <img title="View Profile" class="img-circle img-responsive" src="{% thumbnail comments.author_comment.profile.picture|default:'default_profile.png' 60x60 crop %}"></div>
+{{ comments.content }}<br>
+{{ comments.author_comment }}
+</div>
+{% endfor %}
+
+
         </div>
     </div>
 {#</div>#}
@@ -117,15 +136,16 @@
 </div>
 
 
-{#          {% if user.is_authenticated %}#}
-{#          <a class="btn btn-primary" href="{% url 'question_edit' pk=question.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>#}
-{#          <a class="btn btn-primary" href="{% url 'question_remove' pk=question.pk %}"><span class="glyphicon glyphicon-remove"></span></a>#}
+
+
+
+{#          {% if user.is_authenticated %} #}
+{#          <a class="btn btn-primary" href="{% url 'question_edit' pk=question.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>    #}
+{#          <a class="btn btn-primary" href="{% url 'question_remove' pk=question.pk %}"><span class="glyphicon glyphicon-remove"></span></a>  #}
 {#      {% endif %}#}
 
 {#      <hr>#}
 {#  <a class="btn btn-primary btn-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>#}
 {#  <div class="container">#}
-
-
 
 {% endblock container %}

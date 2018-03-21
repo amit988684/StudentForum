@@ -85,6 +85,7 @@ INSTALLED_APPS = (
 
     # My Added
     'forumapp',
+    'assignment',
     # 'social.apps.django_app.default',
     # 'social_django',
 )
