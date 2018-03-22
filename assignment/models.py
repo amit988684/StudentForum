@@ -12,7 +12,7 @@ from profiles.models import Course
 
 class Assignment(models.Model):
     assignment_name = models.CharField(max_length=50)
-    uploaded_by = models.ForeignKey(settings.AUTH_USER_MODEL)
+    uploaded_by = models.ForeignKey(settings.AUTH_USER_MODEL,default=settings.AUTH_USER_MODEL)
     in_course = models.ForeignKey(Course,null=True,blank=True)
     deadline = models.DateField(blank=True,null=True)
 

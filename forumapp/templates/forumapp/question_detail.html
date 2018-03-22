@@ -19,12 +19,15 @@
 {% endblock %}
 
 {% block container %}
+    <div style="background-image: url('https://modytt.files.wordpress.com/2011/08/blog-background.jpg');background-attachment: fixed;">
+
+
 <br><br><br><br>
 <div class="container profile-body">
   <div class="row">
     <div class="col-sm-11">
 
-            <div class="jumbotron col-sm-12" style="border: ridge;">
+            <div class="jumbotron col-sm-12" style="border: 10px ridge;">
 {#Question #}
 
             <!-- Profile Image -->
@@ -62,7 +65,8 @@
                 <strong style="color: red">Published on </strong> :  {{ question.timestamp|date }}  -
                 {{ question.timestamp|timesince}} ago - {{ question.timestamp|time}}
                 <!--Name--><br>
-              <strong style="color: green">  By :  {{ question.author.name.capitalize }}</strong>
+              <strong style="color: green">  By :  {{ question.author.name.capitalize }}</strong><br>
+                <strong style="color: darkgreen">  Topic :  {{ question.title.capitalize }}</strong>
             </div>
 
 {#            <a href="{% url 'question_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>#}
@@ -101,10 +105,6 @@
         <div class="col-sm-11">
 
 
-
-
-
-
             <div class="jumbotron" style="height: 250px;border: ridge">
 
             <iframe class="col-sm-12" src="{% url "forumapp:add_comment_to_question" pk=question.pk %}" style="border: transparent"></iframe>
@@ -113,16 +113,37 @@
         </div>
     </div>
 
+<!--___________________________________________________________________________-->
+<!--___________________________________________________________________________-->
+
+
+
     <div type="row">
         <div class="col-sm-11">
 
         {% for comments in question.comments.all %}
-        <div class="jumbotron" style="border: ridge">
+        <div class="jumbotron" style="border: ridge;">
 
 
-<a href="{% url "profiles:show" slug=comments.author_comment.profile.slug %}"><div class="col-md-2"> <img title="View Profile" class="img-circle img-responsive" src="{% thumbnail comments.author_comment.profile.picture|default:'default_profile.png' 60x60 crop %}"></div>
-{{ comments.content }}<br>
-{{ comments.author_comment }}
+<a href="{% url "profiles:show" slug=comments.author_comment.profile.slug %}"><div class="col-md-1"> <img title="View Profile" class="img-circle img-responsive" src="{% thumbnail comments.author_comment.profile.picture|default:'default_profile.png' 60x60 crop %}"></div></a>
+            <strong style="color: darkgreen"><a title="Author Name" href="{% url "profiles:show" slug=comments.author_comment.profile.slug %}">{{ comments.author_comment.name.capitalize }}</a></strong>
+
+    <br>
+    <h5 style="color: black">
+         <a title="Author Email" style="color: black;font-size: medium" href="{% url "profiles:show" slug=comments.author_comment.profile.slug %}">
+             {{ comments.author_comment.email.capitalize }}</a>
+        </h5><br>
+                        <h3 class="container">{{ comments.content }}</h3>
+
+        <hr class="jumbotron-fluid">
+            <div class="date" style="text-align: end;">
+                <strong style="color: red">Commented on </strong> :  {{ comments.timestamp_comment|date }}  -
+                {{ comments.timestamp_comment|timesince}} ago - {{ comments.timestamp_comment|time }}
+                <!--Name--><br>
+{#              <strong style="color: green">  By :  {{ comments.author_comment.name.capitalize }}</strong><br>#}
+                <strong style="color: darkgreen">  Question :  {{ comments.question.title }}</strong>
+            </div>
+
 </div>
 {% endfor %}
 
@@ -147,5 +168,5 @@
 {#      <hr>#}
 {#  <a class="btn btn-primary btn-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>#}
 {#  <div class="container">#}
-
+    </div>
 {% endblock container %}

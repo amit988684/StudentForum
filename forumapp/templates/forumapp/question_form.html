@@ -11,21 +11,27 @@
 {#    <meta http-equiv="refresh" content="1"/>#}
         <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
         <link rel="stylesheet" href="{% static "css/forum_base.css" %}">
+{#        <link rel="stylesheet" href="{% static "css/question_form.css" %}">#}
 {% endblock %}
 
 {% block container %}
+
+
+
+    <div style="background-image: url('https://modytt.files.wordpress.com/2011/08/blog-background.jpg');background-attachment: fixed;width: inherit;height: inherit;color: white;">
+
 {#    <style>.temporary{background-image: url("/forumapp/static/forum_bag.jpg"); }</style>#}
 {% block form %}
     <div class="container form-box">
 <center>
 
     <article>
-        <h1>New post</h1>
+        <h1 style="color: white">New post</h1>
     <form method="POST" class="post-form">
     {% csrf_token %}
     {{ form|crispy }}
         <!-- to reload the parent window ( from the question_list.html the iframe is called ) to automatically reload that window when this form submits : we use onclick-->
-    <button onclick="window.parent.location.href = '{% url "forumapp:question_list" %}' " type="submit" class="save btn btn-primary">Save</button>
+    <button onclick="window.parent.location.href = '{% url "forumapp:question_list" %}' " type="submit" class="save btn btn-danger">Save</button>
     </form>
         </article>
 
@@ -34,6 +40,10 @@
 {% endblock %}
 
     <!-- To Remove Footer Just Add The template tag blank in the inherited html-->
+    {% block scripts %}
+
+    {% endblock %}
     {% block footer %}
     {% endblock %}
+    </div>
 {% endblock %}

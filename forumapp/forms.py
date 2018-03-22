@@ -23,14 +23,14 @@ def block_offensive_words(value):
 
 
 class QuestionForm(forms.ModelForm):
-    content = forms.CharField(max_length=1000, widget=forms.Textarea, validators=[block_offensive_words,])
+    content = forms.CharField(max_length=1000, widget=forms.Textarea(attrs={'style':'resize:none;'}), validators=[block_offensive_words,])
 
     class Meta:
         model = Question
         fields = ('title', 'content',)
-        widgets = {'vision': forms.Textarea(attrs={'rows': 6,
-                                                   'cols': 22,
-                                                   'resize': 'none'}),}
+        # widgets = {'vision': forms.Textarea(attrs={'rows': 6,
+        #                                            'cols': 22,
+        #                                            'resize': 'none'}),}
 
 
 class CommentForm(forms.ModelForm):
