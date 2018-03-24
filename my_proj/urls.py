@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 import forumapp.urls    # My Import
 import profiles.urls
 import accounts.urls
+import assignment.urls
 from . import views
 
 urlpatterns = [
@@ -17,6 +18,7 @@ urlpatterns = [
 
     # My App
     url(r'forumapp/', include(forumapp.urls, namespace='forumapp')),
+    url(r'sharing/', include(assignment.urls, namespace='assignment')),
 
     # Google Auth
     url(r'^auth/', include('social_django.urls', namespace='social'))

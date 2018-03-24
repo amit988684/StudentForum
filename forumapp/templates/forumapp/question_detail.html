@@ -128,6 +128,11 @@
 <a href="{% url "profiles:show" slug=comments.author_comment.profile.slug %}"><div class="col-md-1"> <img title="View Profile" class="img-circle img-responsive" src="{% thumbnail comments.author_comment.profile.picture|default:'default_profile.png' 60x60 crop %}"></div></a>
             <strong style="color: darkgreen"><a title="Author Name" href="{% url "profiles:show" slug=comments.author_comment.profile.slug %}">{{ comments.author_comment.name.capitalize }}</a></strong>
 
+            {% if comments.author_comment.profile.user == user %}
+          <a title="Delete Question" class="btn btn-danger" style="float: right" href="{% url 'forumapp:comment_remove' pk=comments.pk %}">Delete?</a>
+{% endif %}
+
+
     <br>
     <h5 style="color: black">
          <a title="Author Email" style="color: black;font-size: medium" href="{% url "profiles:show" slug=comments.author_comment.profile.slug %}">

@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Assignment - List{% endblock %}
+
+<!-- extra styles-->
+{% block extrahead %}
+
+{% endblock %}
+
+{% block container %}
+    <div class="container">
+
+{#<table class="table">#}
+{#  <thead>#}
+{#    <tr>#}
+{#      <th scope="col">#</th>#}
+{#      <th scope="col">First</th>#}
+{#      <th scope="col">Last</th>#}
+{#      <th scope="col">Handle</th>#}
+{#    </tr>#}
+{#  </thead>#}
+{#  <tbody>#}
+{#    <tr>#}
+{#      <th scope="row">1</th>#}
+{#      <td>Mark</td>#}
+{#      <td>Otto</td>#}
+{#      <td>@mdo</td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <th scope="row">2</th>#}
+{#      <td>Jacob</td>#}
+{#      <td>Thornton</td>#}
+{#      <td>@fat</td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <th scope="row">3</th>#}
+{#      <td>Larry</td>#}
+{#      <td>the Bird</td>#}
+{#      <td>@twitter</td>#}
+{#    </tr>#}
+{#  </tbody>#}
+{#</table>#}
+
+
+    <br><br><br><br><br>
+    <!-- For the Teacher -->
+    {% if user.is_staff and user.is_active %}
+<h1>Hello Teacher</h1>
+    {% if assignment_list %}
+
+        <table class="table">
+            <thead>
+                <tr class="bg-primary">
+                    <th scope="col">#</th>
+                    <th scope="col">Assignment</th>
+                    <th scope="col">Deadline</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+
+
+
+        {% for course in assignment_list %}
+
+                <tr class="table-danger">
+                    <th scope="row">1</th>
+                    <td>
+                        {{ course.assignment_name }}
+                    </td>
+                    <td>
+                        {{ course.deadline }}
+                    </td>
+                </tr>
+
+
+{#            <li>{{ course.assignment_name }}</li>#}
+
+         {% endfor %}
+
+
+            </tbody>
+        </table>
+
+
+    {% else %}
+        <h1>No Assignments</h1>
+    {% endif %}
+
+
+
+
+
+
+
+
+
+
+    {% endif %}
+
+
+
+
+    <!-- For the Student -->
+    {% if user.is_active and not user.is_staff %}
+        <h1>hello student</h1>
+{% endif %}
+
+    </div>
+{% endblock %}
