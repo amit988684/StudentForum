@@ -12,11 +12,19 @@
         <link rel="stylesheet" href="{% static "css/forum_base.css" %}">
 {% endblock %}
 
+
 {% block navbar-left %}
 
-    <li {% if active_link == "Forum" %}class="active"{% endif %}><a style="color: green" href="{% url 'forumapp:question_list' %}">Forum</a></li>
+    <li {% if active_link == "home" %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
+<li {% if active_link == "about" %}class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
+
+{# I Edited It #}
+<li {% if active_link == "Forum" %}class="active"{% endif %}><a href="{% url 'forumapp:question_list' %}">Forum</a></li>
+<li {% if active_link == "Assignment" %}class="active"{% endif %}><a href="{% url 'assignment:assignment_list' %}">Assignment</a></li>
+<li {% if active_link == "Developer" %}class="active"{% endif %}><a href="{% url 'profiles:all_user' %}">Developer</a></li>
 
 {% endblock %}
+
 
 {% block container %}
     <div style="background-image: url('https://modytt.files.wordpress.com/2011/08/blog-background.jpg');background-attachment: fixed;">
@@ -27,7 +35,7 @@
   <div class="row">
     <div class="col-sm-11">
 
-            <div class="jumbotron col-sm-12" style="border: 10px ridge;">
+            <div class="jumbotron col-sm-12 container" style="border: 10px ridge;border-color: black;background-image: linear-gradient(black,white)">
 {#Question #}
 
             <!-- Profile Image -->
@@ -57,10 +65,14 @@
 {#            <a href="{% url 'forumapp:question_detail' pk=question.pk %}"><p><h2>{{ question.title }}</h2></a></p>#}
 
 {# having the read more button#}
-            <h3>{{ question.content }}</h3>
+
+        <div class="container">
+<p class="lead" style="color: black">{{ question.content }}</p>
+</div>
+{#            <h3 style="color: black">{{ question.content }}</h3>#}
 {#  <p class="read-more"><a title="Answer Question" href="{% url "forumapp:question_detail" pk=question.pk %}" class="btn btn-block" style="border-bottom-left-radius: 20%;border-bottom: ridge;border-bottom-right-radius: 20%;">Answer ?</a></p>#}
 
-    <hr class="jumbotron-fluid">
+    <hr class="jumbotron-fluid" style="border-color: black;border-width: 2px">
             <div class="date" style="text-align: end;">
                 <strong style="color: red">Published on </strong> :  {{ question.timestamp|date }}  -
                 {{ question.timestamp|timesince}} ago - {{ question.timestamp|time}}
@@ -105,9 +117,9 @@
         <div class="col-sm-11">
 
 
-            <div class="jumbotron" style="height: 250px;border: ridge">
+            <div class="jumbotron" style="height: 300px;border: ridge;border-color: black;border-width: 5px;">
 
-            <iframe class="col-sm-12" src="{% url "forumapp:add_comment_to_question" pk=question.pk %}" style="border: transparent"></iframe>
+            <iframe class="col-sm-12" src="{% url "forumapp:add_comment_to_question" pk=question.pk %}" style="border: transparent;"></iframe>
 
             </div>
         </div>
@@ -122,7 +134,8 @@
         <div class="col-sm-11">
 
         {% for comments in question.comments.all %}
-        <div class="jumbotron" style="border: ridge;">
+{#        <div class="jumbotron" style="border: ridge;border-color: black;border-width: 5px;">#}
+        <div class="jumbotron col-sm-12 container" style="border: 10px ridge;border-color: black;background-image: linear-gradient(black,white)">
 
 
 <a href="{% url "profiles:show" slug=comments.author_comment.profile.slug %}"><div class="col-md-1"> <img title="View Profile" class="img-circle img-responsive" src="{% thumbnail comments.author_comment.profile.picture|default:'default_profile.png' 60x60 crop %}"></div></a>
@@ -138,9 +151,9 @@
          <a title="Author Email" style="color: black;font-size: medium" href="{% url "profiles:show" slug=comments.author_comment.profile.slug %}">
              {{ comments.author_comment.email.capitalize }}</a>
         </h5><br>
-                        <h3 class="container">{{ comments.content }}</h3>
+                        <h3 class="container" style="color: black">{{ comments.content }}</h3>
 
-        <hr class="jumbotron-fluid">
+        <hr class="jumbotron-fluid" style="border-color: black;border-width: 2px">
             <div class="date" style="text-align: end;">
                 <strong style="color: red">Commented on </strong> :  {{ comments.timestamp_comment|date }}  -
                 {{ comments.timestamp_comment|timesince}} ago - {{ comments.timestamp_comment|time }}

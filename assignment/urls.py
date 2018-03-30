@@ -17,6 +17,8 @@ urlpatterns = [
     url(r'^assignment/(?P<pk>\d+)/remove/$', views.AssignmentDeleteView.as_view(), name='assignment_remove'),
     url(r'^slide/(?P<pk>\d+)/remove/$', views.SlideDeleteView.as_view(), name='slide_remove'),
 
+    url(r'^assignment/(?P<pk>\d+)/update/$', views.AssignmentUpdateView.as_view(), name='assignment_update'),
+
 
 
 

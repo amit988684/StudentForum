@@ -11,7 +11,7 @@
 {% block container %}
 {#    <h1>New comment</h1>#}
 
-    <div class="container col-sm-10" style="padding-left: 20%">
+    <div class="container col-sm-12" style="padding-left: 0%">
     <form method="POST">
     {% csrf_token %}
     {{form|crispy}}

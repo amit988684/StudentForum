@@ -1,0 +1,61 @@
+{% if user.is_authenticated %}
+
+{% endif %}
+
+    {% if assignment_list %}
+
+        <table class="table">
+            <thead>
+                <tr class="bg-primary">
+{#                    <th scope="col">#</th>#}
+                    <th scope="col">Assignment</th>
+                    <th scope="col">Course</th>
+                    <th scope="col">Course Id</th>
+                    <th scope="col">Deadline</th>
+                    <th scope="col">Download</th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+
+        {% for assignment in assignment_list %}
+            {% if assignment.share == True %}
+                <tr class="table-danger">
+{#                    <th scope="row">1</th>#}
+{#                    {% for assign in assignment_list %}#}
+{#<h1>{{ assignment.in_course.course_name }}</h1>#}
+                    {% for a in courses %}
+{#                    <h1>{{ a }}</h1>#}
+
+                        {% if assignment.in_course.course_id == a.course_id %}
+                    <td>
+                        {{ assignment.assignment_name }}
+                    </td>
+                    <td>
+                        {{ assignment.in_course.course_name }}
+                    </td>
+                    <td>
+                        {{ assignment.in_course.course_id }}
+                    </td>
+                    <td>
+                        {{ assignment.deadline }}
+                    </td>
+                    <td>
+                        <a href="{{ assignment.assignment_file.url }}"><span class="glyphicon glyphicon-save" style="text-align: center" aria-hidden="true"><br>Download</span></a>
+                    </td>
+                </tr>
+
+                        {% endif %}
+                     {% endfor %}
+            {% endif %}
+         {% endfor %}
+
+
+            </tbody>
+        </table>
+
+
+    {% else %}
+        <h1>No Assignments</h1>
+    {% endif %}

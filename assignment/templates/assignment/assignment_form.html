@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% load crispy_forms_tags %}
+{% load thumbnail %}
+
+{% block title %}Assignment - List{% endblock %}
+
+<!-- extra styles-->
+{% block extrahead %}
+
+{% endblock %}
+
+
+{% block navbar-left %}
+
+    <li {% if active_link == "home" %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
+<li {% if active_link == "about" %}class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
+
+{# I Edited It #}
+<li {% if active_link == "Forum" %}class="active"{% endif %}><a href="{% url 'forumapp:question_list' %}">Forum</a></li>
+<li {% if active_link == "Assignment" %}class="active"{% endif %}><a href="{% url 'assignment:assignment_list' %}">Assignment</a></li>
+<li {% if active_link == "Developer" %}class="active"{% endif %}><a href="{% url 'profiles:all_user' %}">Developer</a></li>
+
+{% endblock %}
+
+
+{% block container %}
+<br><br><br><br>
+    <div class="container">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+{% endblock container %}

@@ -34,6 +34,7 @@ class ProfileForm(forms.ModelForm):
             Field('bio'),
             Field('depart'),
             Field('course'),
+            Field('semester'),
             Field('resume'),
             Field('twitter'),
             Field('github'),
@@ -47,6 +48,7 @@ class ProfileForm(forms.ModelForm):
         fields = ['picture', 'bio',
                   'contact', 'depart',
                   'course',
+                  'semester',
                   'resume',
                   'twitter', 'github',
                   'linkedin', ]

@@ -45,7 +45,7 @@ class Profile(BaseProfile):
     course = models.ManyToManyField(Course)
     contact = models.BigIntegerField(default=None, null=True, blank=True)
     resume = models.FileField('Teacher Resume', upload_to='resume', null=True, blank=True)
-
+    semester = models.IntegerField(null=True,blank=True)
     # Link
     github = models.URLField(max_length=100, blank=True, null=True)
     linkedin = models.URLField(max_length=100, blank=True, null=True)

@@ -12,11 +12,11 @@ from profiles.models import Course
 
 class Assignment(models.Model):
     assignment_name = models.CharField(max_length=50)
-    uploaded_by = models.ForeignKey(settings.AUTH_USER_MODEL,default=settings.AUTH_USER_MODEL)
+    uploaded_by = models.ForeignKey(settings.AUTH_USER_MODEL,default=settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     in_course = models.ForeignKey(Course,null=True,blank=True)
     deadline = models.DateField(blank=True,null=True)
-
-    assignment_file = models.FileField('Assignment', upload_to='assignment', null=True)
+    share = models.BooleanField(default=False)
+    assignment_file = models.FileField('Assignment', upload_to='assignment/%Y/%m/%d/', null=True)
     # resume = models.FileField('Teacher Resume', upload_to='resume', null=True, blank=True)
 
     def __str__(self):
@@ -25,8 +25,16 @@ class Assignment(models.Model):
     def __unicode__(self):
         return self.assignment_name
 
+    # def share_assignment(self):
+    #     self.share = True
+    #     return self.share
+
+    def get_absolute_url(self):
+        return reverse('assignment:assignment_list')
+
     class Meta:
         ordering = ['-deadline']
+
 
 
 class Slide(models.Model):

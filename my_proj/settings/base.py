@@ -24,6 +24,7 @@ TEMPLATES = [
             join(BASE_DIR, 'templates'),
             # insert more TEMPLATE_DIRS here
             join(BASE_DIR, 'forumapp/templates'),
+            join(BASE_DIR, 'assignment/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -86,6 +87,7 @@ INSTALLED_APPS = (
     # My Added
     'forumapp',
     'assignment',
+    'bootstrap3_datepicker',
     # 'social.apps.django_app.default',
     # 'social_django',
 )

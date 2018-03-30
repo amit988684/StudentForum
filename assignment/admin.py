@@ -8,7 +8,7 @@ from .models import Assignment
 
 class AssignmentAdmin(admin.ModelAdmin):
     list_display = ('assignment_name', 'in_course', 'deadline')
-
+    list_editable = ('deadline',)
 
 admin.site.register(Assignment, AssignmentAdmin)
 

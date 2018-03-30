@@ -10,7 +10,28 @@
 {#    <meta http-equiv="refresh" content="1"/>#}
         <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
         <link rel="stylesheet" href="{% static "css/forum_base.css" %}">
+
+        <style>
+        .navbar{
+            border-color: black;
+
+        }
+        </style>
 {% endblock %}
+
+
+{% block navbar-left %}
+
+    <li {% if active_link == "home" %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
+<li {% if active_link == "about" %}class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
+
+{# I Edited It #}
+<li {% if active_link == "Forum" %}class="active"{% endif %}><a href="{% url 'forumapp:question_list' %}">Forum</a></li>
+<li {% if active_link == "Assignment" %}class="active"{% endif %}><a href="{% url 'assignment:assignment_list' %}">Assignment</a></li>
+<li {% if active_link == "Developer" %}class="active"{% endif %}><a href="{% url 'profiles:all_user' %}">Developer</a></li>
+
+{% endblock %}
+
 
 {% block container %}
 <div style="background-image: url('https://modytt.files.wordpress.com/2011/08/blog-background.jpg');background-attachment: fixed;">
@@ -22,7 +43,7 @@
 <center>
 {#<div class="btn-group">#}
 {#  <button style="width: 100%" type="button" class="btn btn-danger">Have A Question ?? </button>#}
-  <button style="width: 600px;margin-left: -25px;border-bottom-left-radius: 25px;border-bottom-right-radius: 25px;border-bottom-width: 8px;border-top-color: white;color: white;background-image: linear-gradient(white,black) " type="button" class="btn btn-block card-header" data-toggle="collapse" data-target="#demo">
+  <button style="width: 600px;margin-left: -25px;border-bottom-left-radius: 25px;border-bottom-right-radius: 25px;border-bottom-width: 8px;background-color: black;color: white;border-bottom-color: white" type="button" class="btn btn-black" data-toggle="collapse" data-target="#demo">
    Have A Question ??  <span class="glyphicon glyphicon-arrow-down"></span>
   </button>
 {#</div>#}
@@ -38,7 +59,7 @@
   <div class="row">
     <div class="col-sm-10">
         <!-- Functionality added in Iframe -->
-        <center><iframe onsubmit="window.location.reload()" src="{% url "forumapp:question_new" %}" style="border:10px solid white;text-align: center;" width="1045" height="550" ></iframe></center>
+        <center><iframe onsubmit="window.location.reload()" src="{% url "forumapp:question_new" %}" style="border:10px solid black;text-align: center;" width="1045" height="550" ></iframe></center>
     </div>
   </div>
 </div>
@@ -49,7 +70,7 @@
 
 {#</div>#}
 
-<hr style="border-color: #211f1f;border-width: 10px" class="col-md-11.5">
+<hr style="border-color: black;border-width: 10px" class="col-md-11.5">
 {#<div class="">#}
 <div class="container profile-body new-decided">
   <div class="row">
@@ -57,7 +78,7 @@
 
     {% for question in question_list %}
 
-        <div class="jumbotron col-sm-12 container" style="border: 10px ridge;">
+        <div class="jumbotron col-sm-12 container" style="border: 10px ridge;border-color: black;background-image: linear-gradient(black,white)">
 {#Question #}
 
             <!-- Profile Image -->
@@ -66,7 +87,7 @@
       <div class="row2">
           <!-- Taking User To The profile page of the author of the post-->
        <div class="col-md-10">
-        <a href="{% url "profiles:show" slug=question.author.profile.slug %}"><div class="col-md-2" onclick="alert('opening_profile')"> <img title="View Profile" class="img-circle img-responsive" src="{% thumbnail question.author.profile.picture|default:'default_profile.png' 60x60 crop %}">
+        <a href="{% url "profiles:show" slug=question.author.profile.slug %}"><div class="col-md-2"> <img title="View Profile" class="img-circle img-responsive img-dim" src="{% thumbnail question.author.profile.picture|default:'default_profile.png' 60x60 crop %}">
                </div>
                </a>
 
@@ -88,12 +109,12 @@
 
 {# having the read more button#}
         <div class="container">
-<p class="lead">{{ question.content }}</p>
+<p class="lead" style="color: black">{{ question.content }}</p>
 </div>
-  <p class="read-more"><a title="Answer Question" href="{% url "forumapp:question_detail" pk=question.pk %}" class="btn btn-block" style="border-bottom-left-radius: 20%;border-bottom: ridge;border-bottom-right-radius: 20%;">Answer ?</a>
+  <p class="read-more" style="color: black"><a title="Answer Question" href="{% url "forumapp:question_detail" pk=question.pk %}" class="btn btn-block" style="border-bottom-left-radius: 20%;border-bottom-right-radius: 20%;border-bottom-color: red;color: black;background-color: grey;">Answer ?</a>
   </p>
 
-    <hr class="jumbotron-fluid">
+    <hr class="jumbotron-fluid" style="border-color: black;border-width: 2px">
             <div class="date" style="text-align: end;">
                 <strong style="color: red">Published on </strong> :  {{ question.timestamp|date }}  -
                 {{ question.timestamp|timesince}} ago - {{ question.timestamp|time}}

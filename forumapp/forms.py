@@ -34,6 +34,8 @@ class QuestionForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
+    content = forms.CharField(max_length=1000,widget=forms.Textarea(attrs={'style':'resize:none;height:70px;'}))
+
     class Meta:
         model = Comment
         fields = ('content',)
