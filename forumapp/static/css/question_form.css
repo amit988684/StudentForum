@@ -3,7 +3,8 @@ body {
   padding: 0;
   background: #242424;
   overflow: hidden;
-  font-family: Helvetica, Arial;
+  /*font-family: Helvetica, Arial;*/
+
 }
 
 canvas {
