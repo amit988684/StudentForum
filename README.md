@@ -21,3 +21,8 @@ comment to give the answer.
 
 3 ) chatting app will also be present which will make user to chat with each other to discuss any topic privatly.
 4 ) calender app which allow the user to have events on the page which matter the most. like the exams , birthdays , deadlines of assignments etc.
+
+<h2>Front Page</h2>
+<p align="center">
+  <img src="project_photos/home.png" width="350"/>
+</p>
