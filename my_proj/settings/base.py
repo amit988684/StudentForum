@@ -88,6 +88,7 @@ INSTALLED_APPS = (
     'forumapp',
     'assignment',
     'bootstrap3_datepicker',
+    'chatapp',
     # 'social.apps.django_app.default',
     # 'social_django',
 )

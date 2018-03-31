@@ -7,10 +7,11 @@ from django.views.generic import (TemplateView,ListView
                                  ,DeleteView,DetailView
                                  ,UpdateView,CreateView,)
 from forumapp.models import Comment,Question
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404,redirect
 from django.contrib.auth.decorators import login_required
+from braces.views import LoginRequiredMixin
+# from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # QUESTION CRUD

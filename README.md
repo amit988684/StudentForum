@@ -24,5 +24,17 @@ comment to give the answer.
 
 <h2>Front Page</h2>
 <p align="center">
-  <img src="project_photos/home.png" width="350"/>
+  <img src="project_photos/home.png" width="500"/>
+</p>
+<h2>Forum App</h2>
+<p align="center">
+  <img src="project_photos/home.png" width="500"/>
+</p>
+<h2>Assignment</h2>
+<p align="center">
+  <img src="project_photos/home.png" width="500"/>
+</p>
+<h2>Profile</h2>
+<p align="center">
+  <img src="project_photos/home.png" width="500"/>
 </p>
