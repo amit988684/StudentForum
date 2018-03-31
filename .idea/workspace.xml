@@ -1,91 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f107204-2a24-482e-bc5b-8d9d21be0155" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment/templates/assignment/test.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/License.pdf" afterPath="$PROJECT_DIR$/static/MDBFree/License.pdf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/README.txt" afterPath="$PROJECT_DIR$/static/MDBFree/README.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/MDBFree/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/MDBFree/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/css/mdb.css" afterPath="$PROJECT_DIR$/static/MDBFree/css/mdb.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/css/mdb.min.css" afterPath="$PROJECT_DIR$/static/MDBFree/css/mdb.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/css/style.css" afterPath="$PROJECT_DIR$/static/MDBFree/css/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Bold.eot" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Bold.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Bold.ttf" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Bold.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Bold.woff" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Bold.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Bold.woff2" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Bold.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Light.eot" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Light.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Light.ttf" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Light.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Light.woff" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Light.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Light.woff2" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Light.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Medium.eot" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Medium.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Medium.ttf" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Medium.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Medium.woff" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Medium.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Medium.woff2" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Medium.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Regular.eot" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Regular.ttf" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Regular.woff" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Regular.woff2" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Regular.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Thin.eot" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Thin.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Thin.ttf" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Thin.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Thin.woff" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Thin.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/font/roboto/Roboto-Thin.woff2" afterPath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Thin.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/lightbox/default-skin.png" afterPath="$PROJECT_DIR$/static/MDBFree/img/lightbox/default-skin.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/lightbox/default-skin.svg" afterPath="$PROJECT_DIR$/static/MDBFree/img/lightbox/default-skin.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/lightbox/preloader.gif" afterPath="$PROJECT_DIR$/static/MDBFree/img/lightbox/preloader.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/overlays/01.png" afterPath="$PROJECT_DIR$/static/MDBFree/img/overlays/01.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/overlays/02.png" afterPath="$PROJECT_DIR$/static/MDBFree/img/overlays/02.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/overlays/03.png" afterPath="$PROJECT_DIR$/static/MDBFree/img/overlays/03.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/overlays/04.png" afterPath="$PROJECT_DIR$/static/MDBFree/img/overlays/04.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/overlays/05.png" afterPath="$PROJECT_DIR$/static/MDBFree/img/overlays/05.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/overlays/06.png" afterPath="$PROJECT_DIR$/static/MDBFree/img/overlays/06.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/overlays/07.png" afterPath="$PROJECT_DIR$/static/MDBFree/img/overlays/07.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/overlays/08.png" afterPath="$PROJECT_DIR$/static/MDBFree/img/overlays/08.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/overlays/09.png" afterPath="$PROJECT_DIR$/static/MDBFree/img/overlays/09.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/svg/arrow_left.svg" afterPath="$PROJECT_DIR$/static/MDBFree/img/svg/arrow_left.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/img/svg/arrow_right.svg" afterPath="$PROJECT_DIR$/static/MDBFree/img/svg/arrow_right.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/index.html" afterPath="$PROJECT_DIR$/static/MDBFree/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/js/bootstrap.js" afterPath="$PROJECT_DIR$/static/MDBFree/js/bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/static/MDBFree/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/js/jquery-3.2.1.min.js" afterPath="$PROJECT_DIR$/static/MDBFree/js/jquery-3.2.1.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/js/mdb.js" afterPath="$PROJECT_DIR$/static/MDBFree/js/mdb.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/js/mdb.min.js" afterPath="$PROJECT_DIR$/static/MDBFree/js/mdb.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/js/popper.min.js" afterPath="$PROJECT_DIR$/static/MDBFree/js/popper.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/license.txt" afterPath="$PROJECT_DIR$/static/MDBFree/license.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/_custom.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/_custom.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/core/_colors.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/core/_colors.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/core/_global.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/core/_global.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/core/_helpers.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/core/_helpers.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/core/_masks.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/core/_masks.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/core/_mixins.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/core/_mixins.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/core/_typography.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/core/_typography.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/core/_variables.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/core/_variables.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/core/_waves.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/core/_waves.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/core/bootstrap/_functions.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/core/bootstrap/_functions.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/core/bootstrap/_variables.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/core/bootstrap/_variables.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_animations-basic.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_animations-basic.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_animations-extended.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_animations-extended.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_badges.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_badges.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_buttons.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_buttons.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_cards.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_cards.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_carousels.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_carousels.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_dropdowns.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_dropdowns.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_footers.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_footers.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_forms.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_forms.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_input-group.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_input-group.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_list-group.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_list-group.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_modals.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_modals.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_msc.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_msc.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_navbars.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_navbars.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_pagination.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_pagination.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/free/_tables.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/free/_tables.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/MDB Free/scss/mdb.scss" afterPath="$PROJECT_DIR$/static/MDBFree/scss/mdb.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/forms.py" afterPath="$PROJECT_DIR$/assignment/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models.py" afterPath="$PROJECT_DIR$/assignment/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/assignment_imports/_student_assignment.html" afterPath="$PROJECT_DIR$/templates/assignment_imports/_student_assignment.html" />
-    </list>
+    <list default="true" id="4f107204-2a24-482e-bc5b-8d9d21be0155" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,8 +91,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assignment/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="522">
+              <caret line="35" column="52" lean-forward="true" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -749,12 +665,12 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15371901" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.507989" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22258064" sideWeight="0.50854" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294766" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2580645" sideWeight="0.492011" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22258064" sideWeight="0.49476585" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22258064" sideWeight="0.49146006" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1183,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="522">
+          <caret line="35" column="52" lean-forward="true" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
           <folding />
         </state>
       </provider>
