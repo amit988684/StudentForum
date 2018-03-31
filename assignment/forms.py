@@ -6,7 +6,7 @@ from .models import Assignment,Slide
 class AssignmentForm(forms.ModelForm):
     class Meta:
         model = Assignment
-        fields = ('assignment_name','in_course','deadline','assignment_file','share')
+        fields = ('assignment_name','in_course','deadline','assignment_file','share','for_semester')
 
 
 class SlideForm(forms.ModelForm):

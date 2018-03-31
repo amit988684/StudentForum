@@ -15,7 +15,10 @@ class Assignment(models.Model):
     uploaded_by = models.ForeignKey(settings.AUTH_USER_MODEL,default=settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     in_course = models.ForeignKey(Course,null=True,blank=True)
     deadline = models.DateField(blank=True,null=True)
+
     share = models.BooleanField(default=False)
+    for_semester = models.IntegerField(null=True,blank=True)
+
     assignment_file = models.FileField('Assignment', upload_to='assignment/%Y/%m/%d/', null=True)
     # resume = models.FileField('Teacher Resume', upload_to='resume', null=True, blank=True)
 

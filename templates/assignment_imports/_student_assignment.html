@@ -20,6 +20,7 @@
 
 
         {% for assignment in assignment_list %}
+            {% if assignment.for_semester == user.profile.semester %}
             {% if assignment.share == True %}
                 <tr class="table-danger">
 {#                    <th scope="row">1</th>#}
@@ -48,6 +49,7 @@
 
                         {% endif %}
                      {% endfor %}
+            {% endif %}
             {% endif %}
          {% endfor %}
 
