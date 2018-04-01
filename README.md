@@ -1,6 +1,15 @@
 # StudentForum
 A basic question and answer forum 
 
+<h1>Technology Used : <br><ul>
+<li>Django</li>
+<li>HTML</li>
+<li>CSS</li>
+<li>JS</li>
+<li>BOOTSTRAP</li>
+</ul>
+</h1>
+
 Problems Faced : 
 
 1 ) Whenever a teacher sends an assignment through the mail , it gets mixed up with all the other mails and gets lost , 
@@ -22,19 +31,31 @@ comment to give the answer.
 3 ) chatting app will also be present which will make user to chat with each other to discuss any topic privatly.
 4 ) calender app which allow the user to have events on the page which matter the most. like the exams , birthdays , deadlines of assignments etc.
 
+
+<h1>Basic Authentication : Login,Logout,Signup functionalities</h1><br>
+
+
 <h2>Front Page</h2>
 <p align="center">
-  <img src="project_photos/home.png" width="500"/>
+  <img src="project_photos/front.png" width="500"/>
 </p>
 <h2>Forum App</h2>
 <p align="center">
-  <img src="project_photos/home.png" width="500"/>
+  <img src="project_photos/forum_tab_questions.png" width="500"/>
 </p>
-<h2>Assignment</h2>
+<h2>Forum App Comments</h2>
 <p align="center">
-  <img src="project_photos/home.png" width="500"/>
+  <img src="project_photos/comments_forum.png" width="500"/>
 </p>
 <h2>Profile</h2>
 <p align="center">
-  <img src="project_photos/home.png" width="500"/>
+  <img src="project_photos/profile.png" width="500"/>
+</p>
+<h2>Assignment Seen By Teachersr</h2>
+<p align="center">
+  <img src="project_photos/assignment_tab_teachers.png" width="500"/>
+</p>
+<h2>Share Assignment ? by teacher</h2>
+<p align="center">
+  <img src="project_photos/share_assignment.png" width="500"/>
 </p>
