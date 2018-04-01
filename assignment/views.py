@@ -96,3 +96,4 @@ def assignment_list_by_course(request,**kwargs):
     courses = Course.objects.all()
     # print("amit" + query)
     return render(request,'assignment/assignment_list.html',{'assignment_list': assignment_list,'courses':courses})
+
