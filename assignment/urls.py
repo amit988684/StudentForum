@@ -8,8 +8,9 @@ app_name = "assignment"
 
 # I Made
 urlpatterns = [
-    url(r'^assignment$', views.AssignmentListView.as_view(), name='assignment_list'),
-    url(r'^slide$', views.SlideListView.as_view(), name='slide_list'),
+    url(r'^assignment/$', views.AssignmentListView.as_view(), name='assignment_list'),
+    url(r'^assignment/(?P<course_val>\w+)$', views.assignment_list_by_course, name='assignment_list_by_course'),
+    url(r'^slide/$', views.SlideListView.as_view(), name='slide_list'),
 
     url(r'^assignment/new/$', views.AssignmentCreateView.as_view(), name='assignment_new'),
     url(r'^slide/new/$', views.SlideCreateView.as_view(), name='slide_new'),

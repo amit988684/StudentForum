@@ -13,7 +13,7 @@ from profiles.models import Course
 class Assignment(models.Model):
     assignment_name = models.CharField(max_length=50)
     uploaded_by = models.ForeignKey(settings.AUTH_USER_MODEL,default=settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
-    in_course = models.ForeignKey(Course,null=True,blank=True)
+    in_course = models.ForeignKey(Course,null=True,blank=True,related_name='in_course')
     deadline = models.DateField(blank=True,null=True)
 
     share = models.BooleanField(default=False)
@@ -23,10 +23,10 @@ class Assignment(models.Model):
     # resume = models.FileField('Teacher Resume', upload_to='resume', null=True, blank=True)
 
     def __str__(self):
-        return self.assignment_name
+        return str(self.assignment_name)
 
     def __unicode__(self):
-        return self.assignment_name
+        return str(self.assignment_name)
 
     # def share_assignment(self):
     #     self.share = True

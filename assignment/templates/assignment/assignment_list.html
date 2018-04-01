@@ -5,7 +5,9 @@
 
 <!-- extra styles-->
 {% block extrahead %}
+{#<link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet" />#}
 
+<link href="{% static "css/navbar_left.css" %}" rel="stylesheet" />
 {% endblock %}
 
 
@@ -24,7 +26,8 @@
 
 
 
-{% block container %}
+{% block container %}<br><br><br>
+{% include "assignment_imports/_navbar_teacher_courses.html" %}
 
     <div class="container">
 
@@ -44,3 +47,7 @@
 
     </div>
 {% endblock %}
+
+{% block footer %}
+
+{% endblock footer %}

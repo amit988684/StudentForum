@@ -27,10 +27,10 @@ class Course(models.Model):
     course_name = models.CharField(max_length=25,unique=True)   # Made Unique
 
     def __str__(self):
-        return self.course_id
+        return str(self.course_id)
 
     def __unicode__(self):
-        return self.course_id
+        return str(self.course_id)
 
 
 DEPART_CHOICE = ((u'coe', u'COE'),

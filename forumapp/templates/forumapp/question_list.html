@@ -71,6 +71,32 @@
 {#</div>#}
 
 <hr style="border-color: black;border-width: 10px" class="col-md-11.5">
+
+<!--paginator-->
+
+
+    {% if is_paginated %}
+
+        <nav aria-label="pagination" >
+        <div class="container">
+            <span class="page-links">
+                {% if page_obj.has_previous %}
+                    <a style="font-size: larger" class="btn btn-primary col-sm-3" href="?page={{ page_obj.previous_page_number }}">previous</a>
+                {% endif %}
+                <span class="page-current">
+                <h1 style="color:white;text-align: center" class="col-sm-6">    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</h1>
+                </span>
+                {% if page_obj.has_next %}
+                    <a style="font-size: larger" class="btn btn-primary col-sm-3" href="?page={{ page_obj.next_page_number }}" style="float: right">next</a>
+                {% endif %}
+            </span>
+        </div>
+        </nav>
+    {% endif %}
+
+<!--end paginator-->
+
+
 {#<div class="">#}
 <div class="container profile-body new-decided">
   <div class="row">

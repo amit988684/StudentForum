@@ -16,10 +16,11 @@ from .forms import AssignmentForm,SlideForm
 # Create your views here.
 from django.db.models import Sum
 from profiles.models import Course
+from django.contrib.auth.decorators import login_required
 
 
 # List View
-class AssignmentListView(LoginRequiredMixin,ListView):
+class AssignmentListView(LoginRequiredMixin, ListView):
     model = Assignment
 
     def get_queryset(self):
@@ -34,7 +35,7 @@ class AssignmentListView(LoginRequiredMixin,ListView):
         return context
 
 
-class SlideListView(LoginRequiredMixin,ListView):
+class SlideListView(LoginRequiredMixin, ListView):
     model = Slide
 
     def get_queryset(self):
@@ -87,4 +88,11 @@ class AssignmentUpdateView(LoginRequiredMixin,UpdateView):
     success_url = reverse_lazy('assignment:assignment_list')
     login_url = '/login/'
 
-
+@login_required
+def assignment_list_by_course(request,**kwargs):
+    # print (kwargs)
+    course_val = str(kwargs['course_val'])
+    assignment_list = Assignment.objects.filter(in_course__course_id=course_val)
+    courses = Course.objects.all()
+    # print("amit" + query)
+    return render(request,'assignment/assignment_list.html',{'assignment_list': assignment_list,'courses':courses})

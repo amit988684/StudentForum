@@ -17,6 +17,7 @@ from braces.views import LoginRequiredMixin
 # QUESTION CRUD
 class QuestionListView(LoginRequiredMixin,ListView):
     model = Question
+    paginate_by = 5
 
     def get_queryset(self):
         return Question.objects.all()
