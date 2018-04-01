@@ -39,23 +39,63 @@ comment to give the answer.
 <p align="center">
   <img src="project_photos/front.png" width="500"/>
 </p>
+
+
+<h1>Forum Tab</h1>
+<ul>
+<li>
 <h2>Forum App</h2>
 <p align="center">
   <img src="project_photos/forum_tab_questions.png" width="500"/>
 </p>
+</li>
+<li>
 <h2>Forum App Comments</h2>
 <p align="center">
   <img src="project_photos/comments_forum.png" width="500"/>
 </p>
-<h2>Profile</h2>
+</li>
+<ul>
+
+
+<h1>Profile</h1>
 <p align="center">
   <img src="project_photos/profile.png" width="500"/>
 </p>
-<h2>Assignment Seen By Teachersr</h2>
+
+<h1>Assignment Tab</h1>
+<ul><li>
+<h2>Assignment Seen By Teacher</h2>
 <p align="center">
   <img src="project_photos/assignment_tab_teachers.png" width="500"/>
 </p>
+</li>
+<li>
 <h2>Share Assignment ? by teacher</h2>
 <p align="center">
   <img src="project_photos/share_assignment.png" width="500"/>
 </p>
+</li>
+<ul>
+
+<h1>Slides Tab</h1>
+<ul><li>
+<h2>Slides for teacher View</h2>
+<p align="center">
+  <img src="project_photos/slides_teacher_view.png" width="500"/>
+</p>
+</li>
+<li>
+<h2>Slides Upload Teacher Forum</h2>
+<p align="center">
+  <img src="project_photos/slides_teacher_forum.png" width="500"/>
+</p>
+</li>
+<li>
+<h2>Slides View For Students</h2>
+<p align="center">
+  <img src="project_photos/slides_student_view.png" width="500"/>
+</p>
+</li>
+</ul>
+
