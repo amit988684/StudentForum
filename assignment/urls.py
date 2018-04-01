@@ -10,7 +10,9 @@ app_name = "assignment"
 urlpatterns = [
     url(r'^assignment/$', views.AssignmentListView.as_view(), name='assignment_list'),
     url(r'^assignment/(?P<course_val>\w+)$', views.assignment_list_by_course, name='assignment_list_by_course'),
+
     url(r'^slide/$', views.SlideListView.as_view(), name='slide_list'),
+    url(r'^slide/(?P<course_val>\w+)$', views.slide_list_by_course, name='slide_list_by_course'),
 
     url(r'^assignment/new/$', views.AssignmentCreateView.as_view(), name='assignment_new'),
     url(r'^slide/new/$', views.SlideCreateView.as_view(), name='slide_new'),
@@ -19,6 +21,7 @@ urlpatterns = [
     url(r'^slide/(?P<pk>\d+)/remove/$', views.SlideDeleteView.as_view(), name='slide_remove'),
 
     url(r'^assignment/(?P<pk>\d+)/update/$', views.AssignmentUpdateView.as_view(), name='assignment_update'),
+    url(r'^slide/(?P<pk>\d+)/update/$', views.SlideUpdateView.as_view(), name='slide_update'),
 
 
 

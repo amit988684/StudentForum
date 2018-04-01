@@ -45,6 +45,8 @@ class Slide(models.Model):
     uploaded_by = models.ForeignKey(settings.AUTH_USER_MODEL, default=settings.AUTH_USER_MODEL)
     in_course = models.ForeignKey(Course, null=True, blank=True)
     # deadline = models.DateField(blank=True, null=True)
+    share = models.BooleanField(default=False)
+    for_semester = models.IntegerField(null=True,blank=True)
 
     slide_file = models.FileField('Slide', upload_to='slide', null=True)
 
@@ -53,6 +55,9 @@ class Slide(models.Model):
 
     def __unicode__(self):
         return self.slide_name
+
+    def get_absolute_url(self):
+        return reverse('assignment:slide_list')
 
     class Meta:
         ordering = ['-pk']

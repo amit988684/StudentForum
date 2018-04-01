@@ -41,6 +41,13 @@ class SlideListView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         return Slide.objects.all()
 
+    def get_context_data(self, **kwargs):
+        context = super(SlideListView,self).get_context_data(**kwargs)
+        context.update({
+            'courses': Course.objects.all().order_by('course_id'),
+            # 'assignment_list': Assignment.objects.all(),
+        })
+        return context
 
 # Create View
 class AssignmentCreateView(LoginRequiredMixin,CreateView):
@@ -67,6 +74,9 @@ class SlideCreateView(LoginRequiredMixin,CreateView):
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.uploaded_by = self.request.user
+
+        self.object.slide_file = self.request.FILES['slide_file']
+
         self.object.save()
         return super(SlideCreateView,self).form_valid(form)
 
@@ -79,13 +89,20 @@ class AssignmentDeleteView(LoginRequiredMixin,DeleteView):
 
 class SlideDeleteView(LoginRequiredMixin,DeleteView):
     model = Slide
-    # success_url =
+    success_url = reverse_lazy('assignment:slide_list')
 
 
 class AssignmentUpdateView(LoginRequiredMixin,UpdateView):
     model = Assignment
     form_class = AssignmentForm
     success_url = reverse_lazy('assignment:assignment_list')
+    login_url = '/login/'
+
+
+class SlideUpdateView(LoginRequiredMixin,UpdateView):
+    model = Slide
+    form_class = SlideForm
+    success_url = reverse_lazy('assignment:slide_list')
     login_url = '/login/'
 
 @login_required
@@ -96,4 +113,14 @@ def assignment_list_by_course(request,**kwargs):
     courses = Course.objects.all()
     # print("amit" + query)
     return render(request,'assignment/assignment_list.html',{'assignment_list': assignment_list,'courses':courses})
+
+
+@login_required
+def slide_list_by_course(request,**kwargs):
+    # print (kwargs)
+    course_val = str(kwargs['course_val'])
+    slide_list = Slide.objects.filter(in_course__course_id=course_val)
+    courses = Course.objects.all()
+    # print("amit" + query)
+    return render(request,'assignment/slide_list.html',{'slide_list': slide_list,'courses':courses})
 

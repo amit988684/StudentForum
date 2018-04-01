@@ -1,20 +1,20 @@
 <h1>Hello Teacher</h1>
-        <a href="{% url 'assignment:assignment_new' %}" ><button class="btn btn-warning col-md-12">Add Assignment <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></a>
+        <a href="{% url 'assignment:slide_new' %}" ><button class="btn btn-warning col-md-12">Add Slide <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></a>
 
 {% if user.is_authenticated %}
 
 {% endif %}
 
-    {% if assignment_list %}
+    {% if slide_list %}
 
         <table class="table">
             <thead>
                 <tr class="bg-primary">
 {#                    <th scope="col">#</th>#}
-                    <th scope="col">Assignment</th>
+                    <th scope="col">Slide</th>
                     <th scope="col">Course</th>
                     <th scope="col">Course Id</th>
-                    <th scope="col">Deadline</th>
+{#                    <th scope="col">Deadline</th>#}
                     <th scope="col">Download</th>
                     <th scope="col">Share</th>
                     <th scope="col">Delete</th>
@@ -25,8 +25,8 @@
             <tbody>
 
 
-        {% for assignment in assignment_list %}
-                {% if assignment.uploaded_by == user.profile.user %}
+        {% for slide in slide_list %}
+                {% if slide.uploaded_by == user.profile.user %}
 
                 <tr class="table-danger">
 {#                    <th scope="row">1</th>#}
@@ -35,31 +35,31 @@
                     {% for a in courses %}
 {#                    <h1>{{ a }}</h1>#}
 
-            {% if assignment.in_course.course_id == a.course_id %}
+            {% if slide.in_course.course_id == a.course_id %}
                     <td>
-                        {{ assignment.assignment_name }}
+                        {{ slide.slide_name }}
                     </td>
                     <td>
-                        {{ assignment.in_course.course_name }}
+                        {{ slide.in_course.course_name }}
                     </td>
                     <td>
-                        {{ assignment.in_course.course_id }}
+                        {{ slide.in_course.course_id }}
+                    </td>
+{#                    <td>#}
+{#                        {{ slide.deadline }}#}
+{#                    </td>#}
+                    <td>
+                        <a href="{{ slide.slide_file.url }}"><span class="glyphicon glyphicon-save" style="text-align: center" aria-hidden="true"><br>Download</span></a>
                     </td>
                     <td>
-                        {{ assignment.deadline }}
-                    </td>
-                    <td>
-                        <a href="{{ assignment.assignment_file.url }}"><span class="glyphicon glyphicon-save" style="text-align: center" aria-hidden="true"><br>Download</span></a>
-                    </td>
-                    <td>
-                        <a href="{% url "assignment:assignment_update" pk=assignment.pk %}">
-                            {% if assignment.share == True %}
-                            <button class="btn btn-success">Shared? --- {{ assignment.share }}
+                        <a href="{% url "assignment:slide_update" pk=slide.pk %}">
+                            {% if slide.share == True %}
+                            <button class="btn btn-success">Shared? --- {{ slide.share }}
                                 <span class="glyphicon glyphicon-share" aria-hidden="true">
                                 </span>
                             </button>
                                 {% else %}
-                             <button class="btn btn-default">Shared? --- {{ assignment.share }}
+                             <button class="btn btn-default">Shared? --- {{ slide.share }}
                                 <span class="glyphicon glyphicon-share" aria-hidden="true">
                                 </span>
                              </button>
@@ -67,7 +67,7 @@
                         </a>
                     </td>
                     <td>
-                        <a href="{% url "assignment:assignment_remove" pk=assignment.pk %}"><button class="btn btn-danger">Delete <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a>
+                        <a href="{% url "assignment:slide_remove" pk=slide.pk %}"><button class="btn btn-danger">Delete <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a>
                     </td>
 
                 </tr>
@@ -85,5 +85,5 @@
 
 
     {% else %}
-        <h1>No Assignments</h1>
+        <h1>No Slide</h1>
     {% endif %}

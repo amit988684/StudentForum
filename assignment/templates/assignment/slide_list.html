@@ -18,8 +18,8 @@
 
  {# I Edited It #}
 <li {% if active_link == "Forum" %}class="active"{% endif %}><a href="{% url 'forumapp:question_list' %}">Forum</a></li>
-<li class="active"><a href="{% url 'assignment:assignment_list' %}">Assignment</a></li>
-<li {% if active_link == "Slides" %}class="active"{% endif %}><a href="{% url 'assignment:slide_list' %}">Slides</a></li>
+<li {% if active_link == "Assignment" %}class="active"{% endif %}><a href="{% url 'assignment:assignment_list' %}">Assignment</a></li>
+<li class="active"><a href="{% url 'assignment:slide_list' %}">Slides</a></li>
 
 <li {% if active_link == "Developer" %}class="active"{% endif %}><a href="{% url 'profiles:all_user' %}">Developer</a></li>
 
@@ -29,14 +29,16 @@
 
 
 {% block container %}<br><br><br>
-{% include "assignment_imports/_navbar_teacher_courses.html" %}
+{% include "slide_import/_navbar_teacher_courses.html" %}
 
     <div class="container">
 
     <br><br><br>
     <!-- For the Teacher -->
     {% if user.is_staff and user.is_active %}
-{% include 'assignment_imports/_teacher_assignment.html' %}
+        {% include "slide_import/_teacher_slide.html" %}
+
+{#{% include 'assignment_imports/_teacher_assignment.html' %}#}
     {% endif %}
 
 
@@ -44,7 +46,9 @@
     <!-- For the Student -->
     {% if user.is_active and not user.is_staff %}
         <h1>hello student</h1>
-        {% include 'assignment_imports/_student_assignment.html' %}
+                {% include "slide_import/_student_slide.html" %}
+
+{#        {% include 'assignment_imports/_student_assignment.html' %}#}
 {% endif %}
 
     </div>
