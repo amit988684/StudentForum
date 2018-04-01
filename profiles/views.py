@@ -6,6 +6,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from . import forms
 from . import models
 from django.shortcuts import render
+from django.views.generic import ListView
+
+# My Added
+from django.contrib.auth.decorators import login_required
+from .models import Profile
 
 class ShowProfile(LoginRequiredMixin, generic.TemplateView):
     template_name = "profiles/show_profile.html"
@@ -65,3 +70,24 @@ class EditProfile(LoginRequiredMixin, generic.TemplateView):
 
 def all_user_view(request):
     return render(request,'all_user_view.html')
+
+
+class UserListView(LoginRequiredMixin,ListView):
+    template_name = 'all_user_view_final.html'
+
+    def get_queryset(self):
+        return Profile.objects.all()
+
+    # def all_users(request):
+    #     context = {'users_list1': Profile.objects.all()}
+    #     return render(request,'all_user_view_final.html',context=context)
+
+#
+# @login_required
+# def user_list_by_privilage(request,**kwargs):
+#     # print (kwargs)
+#     user_type = str(kwargs['user_type'])
+#     profile_list = Profile.objects.filter()
+#     # courses = Course.objects.all()
+#     # print("amit" + query)
+#     return render(request,'all_user_view_final.html',{'profile_list': profile_list})

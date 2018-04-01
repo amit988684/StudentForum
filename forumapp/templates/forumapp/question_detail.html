@@ -15,13 +15,16 @@
 
 {% block navbar-left %}
 
-    <li {% if active_link == "home" %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
+<li {% if active_link == "home" %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
 <li {% if active_link == "about" %}class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
 
-{# I Edited It #}
-<li class="active"><a href="{% url 'forumapp:question_list' %}">Forum</a></li>
-<li {% if active_link == "Assignment" %}class="active"{% endif %}><a href="{% url 'assignment:assignment_list' %}">Assignment</a></li>
-<li {% if active_link == "Developer" %}class="active"{% endif %}><a href="{% url 'profiles:all_user' %}">Developer</a></li>
+ {# I Edited It #}
+<li {% if active_link == 'forumapp:question_list' %}class="active"{% endif %}><a href="{% url 'forumapp:question_list' %}">Forum</a></li>
+<li {% if active_link == 'assignment:assignment_list' %}class="active"{% endif %}><a href="{% url 'assignment:assignment_list' %}">Assignment</a></li>
+<li {% if active_link == 'assignment:slide_list' %}class="active"{% endif %}><a href="{% url 'assignment:slide_list' %}">Slides</a></li>
+
+<li {% if active_link == 'profiles:all_user' %}class="active"{% endif %}><a href="{% url 'profiles:all_user' %}">Developer</a></li>
+<li {% if active_link == 'profiles:all_user_tab' %}class="active"{% endif %}><a href="{% url 'profiles:all_user_tab' %}">All User</a></li>
 
 {% endblock %}
 

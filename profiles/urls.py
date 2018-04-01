@@ -9,4 +9,5 @@ urlpatterns = [
 
 #     My Added
     url(r'^all/users$', views.all_user_view, name='all_user'),
+    url(r'^all/users/tab/$', views.UserListView.as_view(), name='all_user_tab'),
 ]
