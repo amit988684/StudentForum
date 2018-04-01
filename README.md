@@ -55,7 +55,7 @@ comment to give the answer.
   <img src="project_photos/comments_forum.png" width="500"/>
 </p>
 </li>
-<ul>
+</ul>
 
 
 <h1>Profile</h1>
@@ -76,7 +76,7 @@ comment to give the answer.
   <img src="project_photos/share_assignment.png" width="500"/>
 </p>
 </li>
-<ul>
+</ul>
 
 <h1>Slides Tab</h1>
 <ul><li>
