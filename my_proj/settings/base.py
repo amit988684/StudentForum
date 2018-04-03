@@ -64,7 +64,7 @@ if exists(env_file):
 # Raises ImproperlyConfigured exception if SECRET_KEY not in os.environ
 SECRET_KEY = env('SECRET_KEY')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['172.16.14.98','127.0.0.1',]
 
 # Application definition
 
@@ -89,6 +89,7 @@ INSTALLED_APPS = (
     'assignment',
     'bootstrap3_datepicker',
     'chatapp',
+    'contactus',
     # 'social.apps.django_app.default',
     # 'social_django',
 )
@@ -134,7 +135,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['172.16.14.98','127.0.0.1',]
 
 # Crispy Form Theme - Bootstrap 3
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
@@ -165,10 +166,16 @@ AUTHENTICATION_BACKENDS = (
 
     'django.contrib.auth.backends.ModelBackend',
 )
-
+aas=2
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '365081772682-um9ctc90c5g9a7n63l3drhhmeqlvgvk8.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'tGur-f8jM7wHO-pL3uNsYqLv'
 
 
 ################################################################################
 # For Mail Sending
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+# DEFAULT_FROM_EMAIL = 'testing@example.com'
+EMAIL_HOST ='smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587

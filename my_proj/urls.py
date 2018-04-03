@@ -20,8 +20,11 @@ urlpatterns = [
     url(r'forumapp/', include(forumapp.urls, namespace='forumapp')),
     url(r'sharing/', include(assignment.urls, namespace='assignment')),
 
-    # Google Auth
-    url(r'^auth/', include('social_django.urls', namespace='social'))
+   # Google Auth
+    url(r'^auth/', include('social_django.urls', namespace='social')),
+
+    # Contact Us
+    url(r'^contact/', include('contactus.urls', namespace='contactus'))
 
 ]
 
