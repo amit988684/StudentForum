@@ -2,25 +2,84 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f107204-2a24-482e-bc5b-8d9d21be0155" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contactus/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contactus/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contactus/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contactus/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contactus/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contactus/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contactus/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/License.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/css/mdb.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/css/mdb.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Bold.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Bold.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Bold.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Light.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Light.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Light.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Light.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Medium.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Medium.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Medium.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Medium.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Thin.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Thin.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Thin.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/font/roboto/Roboto-Thin.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/lightbox/default-skin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/lightbox/default-skin.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/lightbox/preloader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/overlays/01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/overlays/02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/overlays/03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/overlays/04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/overlays/05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/overlays/06.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/overlays/07.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/overlays/08.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/overlays/09.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/svg/arrow_left.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/img/svg/arrow_right.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/js/jquery-3.2.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/js/mdb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/js/mdb.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/js/popper.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/license.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/_custom.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/core/_colors.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/core/_global.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/core/_helpers.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/core/_masks.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/core/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/core/_typography.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/core/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/core/_waves.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/core/bootstrap/_functions.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/core/bootstrap/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_animations-basic.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_animations-extended.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_badges.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_cards.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_carousels.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_dropdowns.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_footers.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_input-group.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_list-group.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_modals.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_msc.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_navbars.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_pagination.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/free/_tables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/MDBFree/scss/mdb.scss" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contactus/forms.py" afterPath="$PROJECT_DIR$/contactus/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contactus/templates/contactus_form.html" afterPath="$PROJECT_DIR$/contactus/templates/contactus_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contactus/urls.py" afterPath="$PROJECT_DIR$/contactus/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_proj/settings/base.py" afterPath="$PROJECT_DIR$/my_proj/settings/base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_proj/settings/development.py" afterPath="$PROJECT_DIR$/my_proj/settings/development.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_proj/urls.py" afterPath="$PROJECT_DIR$/my_proj/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/_navbar.html" afterPath="$PROJECT_DIR$/templates/_navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/home.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,7 +105,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contactus/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
@@ -68,7 +127,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_proj/settings/base.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
@@ -82,7 +141,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -213,7 +272,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="59" />
+    <option name="x" value="-1861" />
     <option name="y" value="24" />
     <option name="width" value="1861" />
     <option name="height" value="1056" />
@@ -614,8 +673,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="24" width="1861" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1861" y="24" width="1861" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20385675" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -624,7 +683,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25698924" sideWeight="0.48980716" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22150537" sideWeight="0.48870525" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22150537" sideWeight="0.48870525" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -982,14 +1041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contactus/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="80" lean-forward="false" selection-start-line="6" selection-start-column="80" selection-end-line="6" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my_proj/settings/production.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1002,16 +1053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contactus/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1041,6 +1082,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/my_proj/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/contactus/templates/contactus_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1057,18 +1114,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/contactus/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="396">
+          <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_proj/settings/base.py">
+    <entry file="file://$PROJECT_DIR$/contactus/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+        <state relative-caret-position="108">
+          <caret line="6" column="80" lean-forward="false" selection-start-line="6" selection-start-column="80" selection-end-line="6" selection-end-column="80" />
           <folding />
         </state>
       </provider>
