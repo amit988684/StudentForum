@@ -8,7 +8,8 @@
 
 <!-- extra styles-->
 {% block extrahead %}
-
+{#    <link rel="stylesheet" href="{% static "css/assignment_css.css" %}">#}
+<style>.btn-primary{color:#fff;background-color:#007bff;border-color:#007bff}.btn-primary:hover{color:#fff;background-color:#0069d9;border-color:#0062cc}.btn-primary.focus,.btn-primary:focus{box-shadow:0 0 0 .2rem rgba(0,123,255,.5)}.</style>
 {% endblock %}
 
 
@@ -30,7 +31,7 @@
 
 {% block container %}
 <br><br><br><br>
-    <div class="container">
+    <div class="container" style="font-size: 15px">
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form|crispy }}

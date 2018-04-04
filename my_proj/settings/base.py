@@ -90,6 +90,7 @@ INSTALLED_APPS = (
     'bootstrap3_datepicker',
     'chatapp',
     'contactus',
+    'event',
     # 'social.apps.django_app.default',
     # 'social_django',
 )

@@ -10,6 +10,7 @@ from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404,redirect
 from django.shortcuts import render
 
+
 # My Models and forms
 from .models import Assignment,Slide
 from .forms import AssignmentForm,SlideForm

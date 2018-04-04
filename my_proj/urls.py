@@ -24,7 +24,8 @@ urlpatterns = [
     url(r'^auth/', include('social_django.urls', namespace='social')),
 
     # Contact Us
-    url(r'^contact/', include('contactus.urls', namespace='contactus'))
+    url(r'^contact/', include('contactus.urls', namespace='contactus')),
+    url(r'^event/', include('event.urls', namespace='event')),
 
 ]
 

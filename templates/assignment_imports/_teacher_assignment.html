@@ -1,5 +1,5 @@
 <h1>Hello Teacher</h1>
-        <a href="{% url 'assignment:assignment_new' %}" ><button class="btn btn-warning col-md-12">Add Assignment <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></a>
+        <a href="{% url 'assignment:assignment_new' %}" ><button class="btn btn-warning col-md-12" style="font-size: medium">Add Assignment <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></a>
 
 {% if user.is_authenticated %}
 
@@ -8,7 +8,7 @@
     {% if assignment_list %}
 
         <table class="table">
-            <thead>
+            <thead style="font-size: 15px">
                 <tr class="bg-primary">
 {#                    <th scope="col">#</th>#}
                     <th scope="col">Assignment</th>
@@ -28,7 +28,8 @@
         {% for assignment in assignment_list %}
                 {% if assignment.uploaded_by == user.profile.user %}
 
-                <tr class="table-danger">
+{#                    <br>{{ assignment.deadline|timeuntil }}  --- lala#}
+{#                <tr {% if assignment.deadline|timeuntil < '1d' %} class="table-danger" {% endif %}>#}
 {#                    <th scope="row">1</th>#}
 {#                    {% for assign in assignment_list %}#}
 {#<h1>{{ assignment.in_course.course_name }}</h1>#}
@@ -36,30 +37,33 @@
 {#                    <h1>{{ a }}</h1>#}
 
             {% if assignment.in_course.course_id == a.course_id %}
-                    <td>
+                    <td style="font-size: 15px">
                         {{ assignment.assignment_name }}
+
                     </td>
-                    <td>
+                    <td style="font-size: 15px">
                         {{ assignment.in_course.course_name }}
                     </td>
-                    <td>
+                    <td style="font-size: 15px">
                         {{ assignment.in_course.course_id }}
                     </td>
-                    <td>
+                    <td style="font-size: 15px">
                         {{ assignment.deadline }}
+
+
                     </td>
-                    <td>
+                    <td style="font-size: 15px">
                         <a href="{{ assignment.assignment_file.url }}"><span class="glyphicon glyphicon-save" style="text-align: center" aria-hidden="true"><br>Download</span></a>
                     </td>
                     <td>
                         <a href="{% url "assignment:assignment_update" pk=assignment.pk %}">
                             {% if assignment.share == True %}
-                            <button class="btn btn-success">Shared? --- {{ assignment.share }}
+                            <button class="btn btn-success" style="font-size: 15px">Shared? --- {{ assignment.share }}
                                 <span class="glyphicon glyphicon-share" aria-hidden="true">
                                 </span>
                             </button>
                                 {% else %}
-                             <button class="btn btn-default">Shared? --- {{ assignment.share }}
+                             <button class="btn btn-default" style="font-size: 15px">Shared? --- {{ assignment.share }}
                                 <span class="glyphicon glyphicon-share" aria-hidden="true">
                                 </span>
                              </button>
@@ -67,7 +71,7 @@
                         </a>
                     </td>
                     <td>
-                        <a href="{% url "assignment:assignment_remove" pk=assignment.pk %}"><button class="btn btn-danger">Delete <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a>
+                        <a href="{% url "assignment:assignment_remove" pk=assignment.pk %}"><button style="font-size: 15px" class="btn btn-danger">Delete <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></a>
                     </td>
 
                 </tr>
