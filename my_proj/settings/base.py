@@ -25,6 +25,8 @@ TEMPLATES = [
             # insert more TEMPLATE_DIRS here
             join(BASE_DIR, 'forumapp/templates'),
             join(BASE_DIR, 'assignment/templates'),
+            join(BASE_DIR, 'event/templates'),
+            join(BASE_DIR, 'contactus/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -91,6 +93,9 @@ INSTALLED_APPS = (
     'chatapp',
     'contactus',
     'event',
+    'bootstrap3_datetime',
+    # 'bootstrap_admin',  # always before django.contrib.admin
+    # 'django.contrib.admin',
     # 'social.apps.django_app.default',
     # 'social_django',
 )
@@ -180,3 +185,5 @@ EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST ='smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
+
+# BOOTSTRAP_ADMIN_SIDEBAR_MENU = False

@@ -2,7 +2,7 @@ from django import forms
 from .models import Assignment,Slide
 # from bootstrap3_datepicker.widgets import DatePickerInput
 from django.forms.extras.widgets import SelectDateWidget
-
+# from django.contrib.admin import widgets
 
 class AssignmentForm(forms.ModelForm):
     deadline = forms.DateField(widget=SelectDateWidget)

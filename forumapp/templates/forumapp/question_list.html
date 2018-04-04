@@ -107,7 +107,7 @@
 
     {% for question in question_list %}
 
-        <div class="jumbotron col-sm-12 container" style="border: 10px ridge;border-color: black;background-image: linear-gradient(black,white)">
+        <div class="jumbotron col-sm-12 container" style="border: 10px ridge;border-color: black;background-image: linear-gradient(orange,white)">
 {#Question #}
 
             <!-- Profile Image -->
@@ -140,7 +140,7 @@
         <div class="container">
 <p class="lead" style="color: black">{{ question.content }}</p>
 </div>
-  <p class="read-more" style="color: black"><a title="Answer Question" href="{% url "forumapp:question_detail" pk=question.pk %}" class="btn btn-block" style="border-bottom-left-radius: 20%;border-bottom-right-radius: 20%;border-bottom-color: red;color: black;background-color: grey;">Answer ?</a>
+  <p class="read-more" style="color: black"><a title="Answer Question" href="{% url "forumapp:question_detail" pk=question.pk %}" class="btn btn-block" style="border-bottom-left-radius: 20%;border-bottom-right-radius: 20%;border-bottom-color: red;color: black;background-color: darkorange;">Answer ?</a>
   </p>
 
     <hr class="jumbotron-fluid" style="border-color: black;border-width: 2px">

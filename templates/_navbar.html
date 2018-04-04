@@ -7,3 +7,4 @@
 <li {% if active_link == "Slides" %}class="active"{% endif %}><a href="{% url 'assignment:slide_list' %}">Slides</a></li>
 <li {% if active_link == "Developer" %}class="active"{% endif %}><a href="{% url 'profiles:all_user' %}">Developer</a></li>
 <li {% if active_link == "profiles:all_user_tab" %}class="active"{% endif %}><a href="{% url 'profiles:all_user_tab' %}">All User</a></li>
+<li {% if active_link == "event:event_list" %}class="active"{% endif %}><a href="{% url 'event:event_list' %}">Events</a></li>
