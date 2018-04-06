@@ -172,7 +172,7 @@ AUTHENTICATION_BACKENDS = (
 
     'django.contrib.auth.backends.ModelBackend',
 )
-aas=2
+# aas=2
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '365081772682-um9ctc90c5g9a7n63l3drhhmeqlvgvk8.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'tGur-f8jM7wHO-pL3uNsYqLv'
 
@@ -187,3 +187,4 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 
 # BOOTSTRAP_ADMIN_SIDEBAR_MENU = False
+FORMAT_MODULE_PATH = 'demo_time_set.formats'

@@ -17,6 +17,13 @@ class EventCreateView(LoginRequiredMixin,CreateView):
     model = Event
     form_class = EventForm
 
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.event_by = self.request.user
+        self.object.save()
+        return super(EventCreateView,self).form_valid(form)
+
+
 
 class EventListView(LoginRequiredMixin,ListView):
     model = Event

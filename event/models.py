@@ -3,12 +3,13 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.conf import settings
-
+from django.core.urlresolvers import reverse
 # Create your models here.
 
 
 class Event(models.Model):
     event_name = models.CharField(max_length=50)
+    event_details = models.CharField(max_length=150,blank=True,null=True)
     event_date = models.DateField(null=True)
     event_time = models.TimeField(null=True)
 
@@ -25,3 +26,6 @@ class Event(models.Model):
 
     class Meta:
         ordering = ['event_date', 'event_time',]
+
+    def get_absolute_url(self):
+        return reverse('event:event_list')

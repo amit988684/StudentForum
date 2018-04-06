@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% load crispy_forms_tags %}
+{#{% load thumbnail %}#}
+
+{% block title %}Event List{% endblock %}
+
+
+{% block styles %}
+
+{% endblock %}
+
+{% block extrahead %}
+
+<link rel="stylesheet" href="{% static "css/main_event.css" %}"/>
+<link rel="stylesheet" href="{% static "css/bootstrap/bootstrap.css" %}">
+<link rel="stylesheet" href="{% static "css/event_form.css" %}">
+<link rel="stylesheet" href="{% static "css/button.css" %}">
+
+{% endblock %}
+
+
+{% block navbar-left %}
+<li {% if active_link == "home" %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
+<li {% if active_link == "about" %}class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
+
+ {# I Edited It #}
+<li {% if active_link == 'forumapp:question_list' %}class="active"{% endif %}><a href="{% url 'forumapp:question_list' %}">Forum</a></li>
+<li {% if active_link == 'assignment:assignment_list' %}class="active"{% endif %}><a href="{% url 'assignment:assignment_list' %}">Assignment</a></li>
+<li {% if active_link == 'assignment:slide_list' %}class="active"{% endif %}><a href="{% url 'assignment:slide_list' %}">Slides</a></li>
+
+<li {% if active_link == 'profiles:all_user' %}class="active"{% endif %}><a href="{% url 'profiles:all_user' %}">Developer</a></li>
+<li {% if active_link == 'profiles:all_user_tab' %}class="active"{% endif %}><a href="{% url 'profiles:all_user_tab' %}">All User</a></li>
+
+{% endblock %}
+
+
+{% block container %}
+
+    <br><br><br><br><br><br><br>
+
+{#  <center>  <p>Are you sure you want to delete "{{ object }}"?</p>#}
+{#    <input class='btn btn-danger' type="submit" value="Confirm" /></center>#}
+
+<form method="post">{% csrf_token %}
+<div class="popup">
+  <div class="upper" style="color: red">Are you sure you know what you're doing?</div>
+  <div class="stroke"></div>
+  <div class="lower">
+    <button type="submit"><i class="icon-large icon-ok"></i>yes</button>
+
+
+{#    <a href="#" onclick="window.history.back(); return false;" class="button cancel-link">No, take me back</a>#}
+      <button onclick="window.history.back(); return false" href="#"><i class="icon-large icon-remove"></i>no</button>
+
+  </div>
+</div>
+  </form>
+
+
+
+
+{% endblock %}
