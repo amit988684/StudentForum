@@ -14,24 +14,16 @@
 
 
 {% block navbar-left %}
-
-<li {% if active_link == "home" %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
-<li {% if active_link == "about" %}class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
-
- {# I Edited It #}
-<li {% if active_link == 'forumapp:question_list' %}class="active"{% endif %}><a href="{% url 'forumapp:question_list' %}">Forum</a></li>
-<li {% if active_link == 'assignment:assignment_list' %}class="active"{% endif %}><a href="{% url 'assignment:assignment_list' %}">Assignment</a></li>
-<li {% if active_link == 'assignment:slide_list' %}class="active"{% endif %}><a href="{% url 'assignment:slide_list' %}">Slides</a></li>
-
-<li {% if active_link == 'profiles:all_user' %}class="active"{% endif %}><a href="{% url 'profiles:all_user' %}">Developer</a></li>
-<li {% if active_link == 'profiles:all_user_tab' %}class="active"{% endif %}><a href="{% url 'profiles:all_user_tab' %}">All User</a></li>
-
+  {% include "_navbar.html" with active_link="assignment:assignment_list" %}
 {% endblock %}
 
 
 
 
-{% block container %}<br><br><br>
+{% block container %}
+    <div style="background-image: url('https://www.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-10-full.jpg');background-attachment: fixed;">
+<br><br><br>
+
 {% include "assignment_imports/_navbar_teacher_courses.html" %}
 
     <div class="container">
@@ -50,7 +42,7 @@
         {% include 'assignment_imports/_student_assignment.html' %}
 {% endif %}
 
-    </div>
+    </div></div>
 {% endblock %}
 
 {% block footer %}

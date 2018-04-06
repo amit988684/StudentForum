@@ -4,15 +4,7 @@
 {% load thumbnail %}
 
 {% block navbar-left %}
-
-    <li {% if active_link == "home" %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
-<li {% if active_link == "about" %}class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
-
-{# I Edited It #}
-<li class="active"><a href="{% url 'forumapp:question_list' %}">Forum</a></li>
-<li {% if active_link == "Assignment" %}class="active"{% endif %}><a href="{% url 'assignment:assignment_list' %}">Assignment</a></li>
-<li {% if active_link == "Developer" %}class="active"{% endif %}><a href="{% url 'profiles:all_user' %}">Developer</a></li>
-
+      {% include "_navbar.html" with active_link='forumapp:question_list' %}
 {% endblock %}
 
 

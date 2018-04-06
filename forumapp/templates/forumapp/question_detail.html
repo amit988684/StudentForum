@@ -14,23 +14,12 @@
 
 
 {% block navbar-left %}
-
-<li {% if active_link == "home" %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
-<li {% if active_link == "about" %}class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
-
- {# I Edited It #}
-<li {% if active_link == 'forumapp:question_list' %}class="active"{% endif %}><a href="{% url 'forumapp:question_list' %}">Forum</a></li>
-<li {% if active_link == 'assignment:assignment_list' %}class="active"{% endif %}><a href="{% url 'assignment:assignment_list' %}">Assignment</a></li>
-<li {% if active_link == 'assignment:slide_list' %}class="active"{% endif %}><a href="{% url 'assignment:slide_list' %}">Slides</a></li>
-
-<li {% if active_link == 'profiles:all_user' %}class="active"{% endif %}><a href="{% url 'profiles:all_user' %}">Developer</a></li>
-<li {% if active_link == 'profiles:all_user_tab' %}class="active"{% endif %}><a href="{% url 'profiles:all_user_tab' %}">All User</a></li>
-
+      {% include "_navbar.html" with active_link='forumapp:question_list' %}
 {% endblock %}
 
 
 {% block container %}
-    <div style="background-image: url('https://modytt.files.wordpress.com/2011/08/blog-background.jpg');background-attachment: fixed;">
+    <div style="background-image: url('https://www.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-10-full.jpg');background-attachment: fixed;">
 
 
 <br><br><br><br>
@@ -38,7 +27,7 @@
   <div class="row">
     <div class="col-sm-11">
 
-            <div class="jumbotron col-sm-12 container" style="border: 10px ridge;border-color: black;background-image: linear-gradient(black,white)">
+            <div class="jumbotron col-sm-12 container" style="border: 3px ridge;border-color: black;background-image: linear-gradient(orange,white)">
 {#Question #}
 
             <!-- Profile Image -->
@@ -138,7 +127,7 @@
 
         {% for comments in question.comments.all %}
 {#        <div class="jumbotron" style="border: ridge;border-color: black;border-width: 5px;">#}
-        <div class="jumbotron col-sm-12 container" style="border: 10px ridge;border-color: black;background-image: linear-gradient(black,white)">
+        <div class="jumbotron col-sm-12 container" style="border: 3px ridge;border-color: black;background-image: linear-gradient(darkorange,white)">
 
 
 <a href="{% url "profiles:show" slug=comments.author_comment.profile.slug %}"><div class="col-md-1"> <img title="View Profile" class="img-circle img-responsive" src="{% thumbnail comments.author_comment.profile.picture|default:'default_profile.png' 60x60 crop %}"></div></a>

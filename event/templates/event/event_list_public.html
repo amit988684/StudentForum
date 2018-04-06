@@ -34,16 +34,14 @@
 <div class="container">
 
     <div class="row">
-        <h1 class="text-right col-sm-7" style="font-weight: bold;font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;">My Events<a class="col-sm-4 text-right" href="{% url "event:event_list_public" %}"><button class="btn btn-outline-secondary" style="font-size: large;font-weight: bold">Checkout Public Events ?</button></a></h1>
+        <h1 class="text-right col-sm-7" style="font-weight: bold;font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;">Public Events<a class="col-sm-4 text-right" href="{% url "event:event_list" %}"><button class="btn btn-outline-secondary" style="font-size: large;font-weight: bold">Checkout Private Events ?</button></a></h1>
     </div>
 
 
     <hr style="border-width: 2px">
-
-{#{{ event_user }}#}
-{% if event_list and event_user.event_by == user %}
+{% if event_list %}
     {% for event in event_list %}
-        {% if event.event_by == user %}
+{#        {% if event.event_by == user %}#}
 
 {#        <h1>{{ event.event_name }}{{ event.event_time }}{{ event.event_date }}{{ event.event_added_on }}{{ event.event_by }}</h1>#}
 <div class="col-sm-6">
@@ -54,7 +52,7 @@
       <div class="col-12 col-md-6 text-left">
       <strong style="color: black">Event Name : </strong> {{ event.event_name.capitalize }}
       </div>
-
+{% if event.event_by == user %}
       <div class="col-12 col-md-3 text-right">
           <a href="{% url "event:event_update" pk=event.pk %}"><button class="btn-outline-warning" style="font-family: Laksaman;color: black">Edit</button></a>
       </div>
@@ -62,6 +60,7 @@
       <div class="col-12 col-md-3 text-right">
           <a href="{% url "event:event_remove" pk=event.pk %}"><button class="btn-outline-danger" style="font-family: Laksaman;color: black">Delete</button></a>
       </div>
+{% endif %}
       </div>
   </div>
 
@@ -98,7 +97,7 @@
             </div>
 </div>
 </div>
-        {% endif %}
+{#        {% endif %}#}
     {% endfor %}
  {% else %}
         <h1 class="text-right col-sm-7" style="font-weight: bold;font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;">No Events</h1>

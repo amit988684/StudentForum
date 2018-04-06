@@ -25,14 +25,22 @@ class EventCreateView(LoginRequiredMixin,CreateView):
 
 
 
-class EventListView(LoginRequiredMixin,ListView):
+class EventListView(LoginRequiredMixin, ListView):
     model = Event
 
     def get_queryset(self):
         return Event.objects.all()
 
+    def get_context_data(self, **kwargs):
+        context = super(EventListView, self).get_context_data(**kwargs)
+        # event_user= Event.objects.filter(event_by=self.request.user)
+        context.update({
+            'event_user': Event.objects.filter(event_by=self.request.user).first()
+            # 'assignment_list': Assignment.objects.all(),
+        })
+        return context
 
-class EventDeleteView(LoginRequiredMixin,DeleteView):
+class EventDeleteView(LoginRequiredMixin, DeleteView):
     model = Event
     success_url = reverse_lazy('event:event_list')
 
@@ -43,3 +51,8 @@ class EventUpdateView(UpdateView):
     success_url = reverse_lazy('event:event_list')
     login_url = '/login/'
 
+
+def event_list_view_public(request):
+    event_list = Event.objects.filter(private=False)
+    context = {'event_list': event_list, }
+    return render(request,'event/event_list_public.html', context=context)

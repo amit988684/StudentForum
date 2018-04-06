@@ -36,3 +36,39 @@ canvas {
   color: #aaaaaa;
   display: none;
 }
+
+
+.page-bg {
+
+  background-image: url('https://www.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-2-full.jpg');
+  background-attachment: fixed;
+  width: inherit;
+  color: black;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*filter: blur(5px);*/
+
+  /*background: url('https://www.elegantthemes.com/blog/wp-content/uploads/2016/02/photo-1450101215322-bf5cd27642fc.jpg');*/
+  /*-webkit-filter: blur(5px);*/
+  /*-moz-filter: blur(5px);*/
+  /*-o-filter: blur(5px);*/
+  /*-ms-filter: blur(5px);*/
+  /*filter: blur(5px);*/
+  /*position: fixed;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*z-index: -1;*/
+}
+
+
+.image-container, .blurred, .image-container>img {
+   -webkit-filter: blur(5px);
+   -moz-filter: blur(5px);
+   -o-filter: blur(5px);
+   -ms-filter: blur(5px);
+   filter: blur(5px);
+}

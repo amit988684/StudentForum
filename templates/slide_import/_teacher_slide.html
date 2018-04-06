@@ -1,4 +1,4 @@
-<h1>Hello Teacher</h1>
+<h1 class="text-center">Slides</h1><hr style="border-color: black">
         <a href="{% url 'assignment:slide_new' %}" ><button style="font-size: medium" class="btn btn-warning col-md-12">Add Slide <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></a>
 
 {% if user.is_authenticated %}
@@ -7,7 +7,7 @@
 
     {% if slide_list %}
 
-        <table class="table">
+        <table class="table" style="color: black">
             <thead style="font-size: 15px">
                 <tr class="bg-primary">
 {#                    <th scope="col">#</th>#}

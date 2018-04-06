@@ -10,8 +10,8 @@ from django.core.urlresolvers import reverse
 class Event(models.Model):
     event_name = models.CharField(max_length=50)
     event_details = models.CharField(max_length=150,blank=True,null=True)
-    event_date = models.DateField(null=True)
-    event_time = models.TimeField(null=True)
+    # event_date = models.DateField(null=True)
+    event_date_time = models.DateTimeField(null=True)
 
     event_added_on = models.DateTimeField(auto_now_add=True)
     event_by = models.ForeignKey(settings.AUTH_USER_MODEL,default=settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
@@ -25,7 +25,7 @@ class Event(models.Model):
         return self.event_name
 
     class Meta:
-        ordering = ['event_date', 'event_time',]
+        ordering = ['event_date_time',]
 
     def get_absolute_url(self):
         return reverse('event:event_list')

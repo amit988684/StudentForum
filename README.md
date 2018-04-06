@@ -99,3 +99,4 @@ comment to give the answer.
 </li>
 </ul>
 
+<script src="{% static 'node_modules/angular/angular.js' %}" type="text/javascript">

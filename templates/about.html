@@ -70,7 +70,8 @@
             <abbr>P:</abbr> +91 7049452169
           </address>
         </div>
-        <div id="map-container" class="col-md-8"></div>
+
+          <div id="map-container" class="col-md-8"></div>
       </div>
     </div>
   </div>
@@ -83,7 +84,7 @@
 
    function init_map() {
      // Enter the latitude and longitude of your office here
-	 var myLocation = new google.maps.LatLng(12.8395, 80.1375);
+	 var myLocation = new google.maps.LatLng(15.7620, 78.0364);
 
      var mapOptions = {
           center: myLocation,
@@ -92,7 +93,7 @@
 
 	 var marker = new google.maps.Marker({
 	   position: myLocation,
-	   title:"We are here"});
+	   title:"My College"});
 
      var map = new google.maps.Map(document.getElementById("map-container"),
                                    mapOptions);

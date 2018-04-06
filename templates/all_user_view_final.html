@@ -16,24 +16,16 @@
 
 
 {% block navbar-left %}
-
-<li {% if active_link == "home" %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
-<li {% if active_link == "about" %}class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
-
- {# I Edited It #}
-<li {% if active_link == 'forumapp:question_list' %}class="active"{% endif %}><a href="{% url 'forumapp:question_list' %}">Forum</a></li>
-<li {% if active_link == 'assignment:assignment_list' %}class="active"{% endif %}><a href="{% url 'assignment:assignment_list' %}">Assignment</a></li>
-<li {% if active_link == 'assignment:slide_list' %}class="active"{% endif %}><a href="{% url 'assignment:slide_list' %}">Slides</a></li>
-
-<li {% if active_link == 'profiles:all_user' %}class="active"{% endif %}><a href="{% url 'profiles:all_user' %}">Developer</a></li>
-<li {% if active_link == 'profiles:all_user_tab' %}class="active"{% endif %}><a href="{% url 'profiles:all_user_tab' %}">All User</a></li>
-
+          {% include "_navbar.html" with active_link='profiles:all_user_tab' %}
 {% endblock %}
 
 
 
 
-{% block container %}<br>
+{% block container %}
+        <div style="background-image: url('https://www.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-10-full.jpg');background-attachment: fixed;">
+
+    <br>
 <br><br>
     <div class="container">
 
@@ -55,8 +47,8 @@
 
 <div class="container">
 
-<h1 id="Teachers" style="text-align: center;background-color: #00acc1;height: 50px">Teachers</h1>
-    <hr style="border-width: 5px;border-color: red">
+<h1 id="Teachers" style="text-align: center;background-color: #71dd8a;height: 50px">Teachers</h1>
+    <hr style="border-width: 2px;border-color: blue">
 
     {% for user_val in profile_list %}
 {% if user_val.user.is_staff and user_val.user.is_active %}
@@ -64,13 +56,13 @@
 <div class="col-md-4">
 <div class="card">
    <img src="{% thumbnail user_val.picture|default:'default_profile.png' 400x400 crop %}" alt="{{ user_val.user.name }}" title="{{ user_val.user.name }}" style="width:100%;" onclick="alert('{{ user_val.user.name }}')">
-    <a href="{% url "profiles:show" slug=user_val.slug %}"><h1>{{ user_val.user.name.capitalize }}</h1></a>
+    <a href="{% url "profiles:show" slug=user_val.slug %}"><h1 style="color: black">{{ user_val.user.name.capitalize }}</h1></a>
 {% if user_val.user.is_staff and user_val.user.is_active %}
-  <p class="title">Teacher at</p>
+  <p class="title" style="color: black">Teacher at</p>
     {% else %}
   <p class="title">Student at</p>
     {% endif %}
-  <p>IIITDM KURNOOL</p>
+  <p style="color: black">IIITDM KURNOOL</p>
 {#  <a href="#"><i class="fa fa-dribbble"></i></a>#}
   <a href="{{ user_val.twitter }}" ><i class="fa fa-twitter"></i></a>
   <a href="{{ user_val.linkedin }}"><i class="fa fa-linkedin"></i></a>
@@ -84,8 +76,8 @@
 
 <br>
     <div class="container">
-        <h1 id="Students" style="text-align: center;background-color: #00acc1;height: 50px">Students</h1>
-    <hr style="border-width: 5px;border-color: red">
+        <h1 id="Students" style="text-align: center;background-color: #71dd8a;height: 50px">Students</h1>
+    <hr style="border-width: 2px;border-color: blue">
 
         {% for user_val in profile_list %}
 {% if not user_val.user.is_staff and user_val.user.is_active %}
@@ -94,13 +86,13 @@
 <div class="col-md-4">
 <div class="card">
   <img src="{% thumbnail user_val.picture|default:'default_profile.png' 400x400 crop %}" alt="{{ user_val.user.name }}" title="{{ user_val.user.name }}" style="width:100%;" onclick="alert('{{ user_val.user.name }}')">
-    <a href="{% url "profiles:show" slug=user_val.slug %}"> <h1>{{ user_val.user.name.capitalize }}</h1></a>
+    <a href="{% url "profiles:show" slug=user_val.slug %}"> <h1 style="color: black">{{ user_val.user.name.capitalize }}</h1></a>
 {% if user_val.user.is_staff and user_val.user.is_active %}
-  <p class="title">Teacher at</p>
+  <p class="title" style="color: black">Teacher at</p>
     {% else %}
-  <p class="title">Student at</p>
+  <p class="title" style="color: black">Student at</p>
     {% endif %}
-  <p>IIITDM KURNOOL</p>
+  <p style="color: black">IIITDM KURNOOL</p>
 {#  <a href="#"><i class="fa fa-dribbble"></i></a>#}
   <a href="{{ user_val.twitter }}"><i class="fa fa-twitter"></i></a>
   <a href="{{ user_val.linkedin }}"><i class="fa fa-linkedin"></i></a>
@@ -115,5 +107,5 @@
 
 
             <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
+        </div>
 {% endblock container %}
