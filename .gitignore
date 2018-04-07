@@ -6,5 +6,4 @@ requirements.txt
 accounts/
 my_proj/
 media/
-static/
 node_modules/
