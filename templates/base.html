@@ -107,24 +107,22 @@
     {% block footer %}
       <!-- Some social button for contact will do -->
       <a name="contact"></a>
-      <div class="container">
+      <div class="container" style="color: black;font-size: medium;font-weight: bold;">
             <div class="footer">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-sm-6 text-left">
               <p>&copy; RobHood {% now 'Y' %}</p>
 
           </div>
-          <div class="col-lg-6 text-right">
+          <div class="col-sm-6 text-right">
               Connect with us on
-            <a href="https://www.facebook.com/RobHood97"><i class="fa fa-facebook"></i> Facebook</a> or
+            <a href="https://www.facebook.com/RobHood97"><i class="fa fa-facebook"></i>Facebook</a> or
             <a href="https://twitter.com/AmitSgr99"><i class="fa fa-twitter"></i> Twitter</a> or
             <a href="{% url 'contactus:contactus_view' %}">Contact Us <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></a>
-
 
           </div>
         </div>
             </div>
-
       </div>
     {% endblock %}
 

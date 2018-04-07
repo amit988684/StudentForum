@@ -9,7 +9,9 @@
 <link href="{% static "css/navbar_left.css" %}" rel="stylesheet" />
     <link rel="stylesheet" href="{% static "css/assignment_css.css" %}">
 {#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">#}
+<style>
 
+</style>
 {% endblock %}
 
 
@@ -21,14 +23,11 @@
 
 
 {% block container %}
-    <div style="background-image: url('https://www.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-10-full.jpg');background-attachment: fixed;">
-<br><br><br>
+    <div class="text-page" style="background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/blurred-background-images-web-design-14.jpg');background-attachment: fixed;">
 
 {% include "assignment_imports/_navbar_teacher_courses.html" %}
 
     <div class="container">
-
-    <br><br><br>
     <!-- For the Teacher -->
     {% if user.is_staff and user.is_active %}
 {% include 'assignment_imports/_teacher_assignment.html' %}
@@ -38,13 +37,10 @@
 
     <!-- For the Student -->
     {% if user.is_active and not user.is_staff %}
-        <h1>hello student</h1>
+{#        <h1>hello student</h1>#}
         {% include 'assignment_imports/_student_assignment.html' %}
 {% endif %}
 
     </div></div>
 {% endblock %}
 
-{% block footer %}
-
-{% endblock footer %}

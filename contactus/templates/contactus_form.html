@@ -11,14 +11,21 @@
 
 
 {% block container %}
-    <br><br><br><br><br><br><br>
+<div class="text-page">
+
 
 <div class="container">
+    <h1 style="font-weight: bold" class="text-center">Contact Us</h1>
+    <hr style="border-width: medium">
+
+<div class="row">
+    <div class="col-sm-6">
+
     <form method="post">
     {% csrf_token %}
 {{ form|crispy }}
     <button type="submit" class="btn btn-primary">Send Mail !</button>
     </form>
 
-</div>
+</div></div></div></div>
 {% endblock %}

@@ -7,9 +7,9 @@
 {% block title %}Event List{% endblock %}
 
 
-{% block styles %}
-
-{% endblock %}
+{#{% block styles %}#}
+{##}
+{#{% endblock %}#}
 
 {% block extrahead %}
 
@@ -26,7 +26,7 @@
 {% endblock %}
 
 
-{% block container %}        <div style="background-image: url('https://www.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-10-full.jpg');background-attachment: fixed;">
+{% block container %}        <div style="background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/blurred-background-images-web-design-14.jpg');background-attachment: fixed;">
 
     <br><br><br><br>
 <center><a  href="{% url "event:event_new" %}"><button class="btn btn-outline-info" style="font-size: larger;font-weight: bold">Add Event</button></a></center>
@@ -34,11 +34,16 @@
 <div class="container">
 
     <div class="row">
-        <h1 class="text-right col-sm-7" style="font-weight: bold;font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;">My Events<a class="col-sm-4 text-right" href="{% url "event:event_list_public" %}"><button class="btn btn-outline-secondary" style="font-size: large;font-weight: bold">Checkout Public Events ?</button></a></h1>
+        <h1 class="text-right col-sm-7" style="font-weight: bold;font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;">My Events
+            <a class="col-sm-4 text-right" href="{% url "event:event_list_public" %}">
+                <button class="btn btn-outline-secondary" style="font-size: large;font-weight: bold">Checkout Public Events ?
+                </button>
+            </a>
+        </h1>
     </div>
 
 
-    <hr style="border-width: 2px">
+    <hr style="border-width: 2px;border-color: black">
 
 {#{{ event_user }}#}
 {% if event_list and event_user.event_by == user %}

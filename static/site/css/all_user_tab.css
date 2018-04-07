@@ -3,6 +3,10 @@
     max-width: 300px;
     margin: auto;
     text-align: center;
+
+}
+.card:hover{
+    opacity: 1.0;
 }
 
 .title {
@@ -76,3 +80,4 @@ button:hover, a:hover {
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
+

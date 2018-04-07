@@ -198,3 +198,5 @@ STATICFILES_DIRS += [
 
 FORM_RENDERER = 'djng.forms.renderers.DjangoAngularBootstrap3Templates'
 
+# import django_heroku
+# django_heroku.settings(locals())

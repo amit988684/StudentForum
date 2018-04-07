@@ -8,10 +8,20 @@
 
 {% endblock %}
 
+{% block extrahead %}
+<style>
+body {
+height: 100%;
+    background-image: none;
+    background-attachment: scroll;
+}
+</style>
+{% endblock %}
+
 {% block container %}
 {#    <h1>New comment</h1>#}
 
-    <div class="container col-sm-12" style="padding-left: 0%">
+    <div class="container col-sm-offset-3 col-sm-6" style="">
     <form method="POST">
     {% csrf_token %}
     {{form|crispy}}

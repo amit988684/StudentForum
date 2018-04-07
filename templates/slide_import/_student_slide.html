@@ -1,11 +1,14 @@
+
+
+   <h1 style="font-weight: bold" class="text-center">Slides</h1>
+    <hr style="border-width: medium;border-color: black">
+
 {% if user.is_authenticated %}
 
-{% endif %}
-
     {% if slide_list %}
-
-        <table class="table">
-            <thead>
+<div class="table-responsive">
+        <table class="table" style="color: black">
+            <thead style="font-size: 15px">
                 <tr class="bg-primary">
 {#                    <th scope="col">#</th>#}
                     <th scope="col">Assignment</th>
@@ -22,27 +25,26 @@
         {% for slide in slide_list %}
             {% if slide.for_semester == user.profile.semester %}
             {% if slide.share == True %}
-                <tr class="table-danger">
+                <tr>
 {#                    <th scope="row">1</th>#}
 {#                    {% for assign in assignment_list %}#}
 {#<h1>{{ assignment.in_course.course_name }}</h1>#}
                     {% for a in courses %}
 {#                    <h1>{{ a }}</h1>#}
-
                         {% if slide.in_course.course_id == a.course_id %}
-                    <td>
+                    <td style="font-size: 15px">
                         {{ slide.slide_name }}
                     </td>
-                    <td>
+                    <td style="font-size: 15px">
                         {{ slide.in_course.course_name }}
                     </td>
-                    <td>
+                    <td style="font-size: 15px">
                         {{ slide.in_course.course_id }}
                     </td>
 {#                    <td>#}
 {#                        {{ slide.deadline }}#}
 {#                    </td>#}
-                    <td>
+                    <td style="font-size: 15px">
                         <a href="{{ slide.slide_file.url }}"><span class="glyphicon glyphicon-save" style="text-align: center" aria-hidden="true"><br>Download</span></a>
                     </td>
                 </tr>
@@ -57,7 +59,9 @@
             </tbody>
         </table>
 
-
+</div>
     {% else %}
         <h1>No Assignments</h1>
+        </div>
     {% endif %}
+{% endif %}
