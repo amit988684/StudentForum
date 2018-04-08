@@ -26,7 +26,7 @@ opacity: 1 !important;
 
 
 {% block container %}
-<div class="text-page" style="background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/blurred-background-images-web-design-14.jpg');background-attachment: fixed;">
+<div class="text-page" style="background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/blurred-background-images-web-design-14.jpg');background-attachment: fixed;background-size: cover;">
 {#The Cover Type On the Top has the form#}
 
     <!-- For the click and open a collapsing bar effect-->
@@ -92,8 +92,7 @@ opacity: 1 !important;
 
     {% for question in question_list %}
 
-        <div class="jumbotron col-sm-12 container" style="border: 3px ridge;border-color: black;background-image: url('https://cdn.pixabay.com/photo/2017/07/29/13/17/ahead-2551465_960_720.jpg');background-attachment: fixed;background-size: 100%;
-">
+        <div class="jumbotron col-sm-12 container" style="border: 3px ridge;border-color: black;background-image: url('https://cdn.pixabay.com/photo/2017/07/29/13/17/ahead-2551465_960_720.jpg');background-attachment: fixed;background-size: cover;">
 {#Question #}
 
             <!-- Profile Image -->
@@ -105,6 +104,7 @@ opacity: 1 !important;
         <a href="{% url "profiles:show" slug=question.author.profile.slug %}"><div class="col-md-2"> <img title="View Profile" class="img-circle img-responsive" src="{% thumbnail question.author.profile.picture|default:'default_profile.png' 60x60 crop %}">
                </div>
                </a>
+{#    <p><a></a></p>#}
 
                 <p>
                 <strong><a title="Author Name" style="color: green;" href="{% url "profiles:show" slug=question.author.profile.slug %}">{{ question.author.name.capitalize }}</a></strong><br>

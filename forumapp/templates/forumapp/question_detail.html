@@ -26,7 +26,7 @@ opacity: 1 !important;
 
 
 {% block container %}
-    <div  class="text-page" style="background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/blurred-background-images-web-design-14.jpg');background-attachment: fixed;">
+    <div  class="text-page" style="background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/blurred-background-images-web-design-14.jpg');background-attachment: fixed;background-size: cover;">
 
 <div class="container profile-body">
   {#       Question    Start       #}
@@ -34,8 +34,7 @@ opacity: 1 !important;
     <div class="row">
     <div class="col-sm-11">
 
-            <div class="jumbotron col-sm-12 container" style="border: 3px ridge;border-color: black;background-image: url('https://cdn.pixabay.com/photo/2017/07/29/13/17/ahead-2551465_960_720.jpg');background-attachment: fixed;background-size: 100%;
-">
+            <div class="jumbotron col-sm-12 container" style="border: 3px ridge;border-color: black;background-image: url('https://cdn.pixabay.com/photo/2017/07/29/13/17/ahead-2551465_960_720.jpg');background-attachment: fixed;background-size: cover;">
 {#Question #}
 
             <!-- Profile Image -->
@@ -117,7 +116,7 @@ opacity: 1 !important;
         <div class="col-sm-11">
 
 
-            <div class="jumbotron" style="height: 300px;border: ridge;border-color: black;border-width: 5px;background-image: url('https://cdn.pixabay.com/photo/2017/07/29/13/17/ahead-2551465_960_720.jpg');background-attachment: fixed;background-size: 100%;opacity: 0.8">
+            <div class="jumbotron" style="height: 300px;border: ridge;border-color: black;border-width: 5px;background-image: url('https://cdn.pixabay.com/photo/2017/07/29/13/17/ahead-2551465_960_720.jpg');background-attachment: fixed;background-size: cover;opacity: 0.8">
 
             <iframe class="col-sm-12" src="{% url "forumapp:add_comment_to_question" pk=question.pk %}" style="border: transparent;"></iframe>
 
@@ -135,8 +134,7 @@ opacity: 1 !important;
 
         {% for comments in question.comments.all %}
 {#        <div class="jumbotron" style="border: ridge;border-color: black;border-width: 5px;">#}
-        <div class="jumbotron col-sm-12 container" style="border: 3px ridge;border-color: black;background-image: url('https://cdn.pixabay.com/photo/2017/07/29/13/17/ahead-2551465_960_720.jpg');background-attachment: fixed;background-size: 100%;
-">
+        <div class="jumbotron col-sm-12 container" style="border: 3px ridge;border-color: black;background-image: url('https://cdn.pixabay.com/photo/2017/07/29/13/17/ahead-2551465_960_720.jpg');background-attachment: fixed;background-size: cover;">
 
 
 <a href="{% url "profiles:show" slug=comments.author_comment.profile.slug %}">

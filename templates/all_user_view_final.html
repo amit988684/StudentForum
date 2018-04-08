@@ -7,12 +7,48 @@
 
 <!-- extra styles-->
 {% block extrahead %}
-    <link rel="stylesheet" href="{% static "site/css/all_user_tab.css" %}"/>
 
+    <link rel="stylesheet" href="{% static "site/css/all_user_tab.css" %}"/>
+    <style>
+    .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}
+    </style>
 {#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>#}
 <link href="{% static "css/navbar_left.css" %}" rel="stylesheet"/>
     <script src="{% static "site/js/all_user_tab.js" %}"></script>
-    <link rel="stylesheet" href="{% static "MDBFree/css/mdb.min.css" %}"/>
+{#    <link rel="stylesheet" href="{% static "MDBFree/css/mdb.min.css" %}"/>#}
 {% endblock %}
 
 
@@ -24,9 +60,8 @@
 
 
 {% block container %}
-        <div class="text-page" style="background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/blurred-background-images-web-design-14.jpg');background-attachment: fixed;">
+        <div class="text-page" style="background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/blurred-background-images-web-design-14.jpg');background-attachment: fixed;background-size: cover;">
     <div class="container">
-
 {#        <div class="container">#}
 
     <nav class="navbar navbar-inverse navbar-static-top" style="background-color: white;position: fixed;padding-left: 2px;">
@@ -39,6 +74,7 @@
     </nav>
 {#        </div>#}
     </div>
+
 <br><br>
 <div class="container">
 
@@ -55,13 +91,10 @@ background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, F
 <div class="card" style="background: #6190E8;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #A7BFE8, #6190E8);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #A7BFE8, #6190E8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-opacity: 0.9;
-">
+opacity: 0.9;">
 {#<div class="view overlay">#}
-    <a href="#">
-        <div class="mask waves-effect waves-light rgba-white-slight"></div>
 
-   <img src="{% thumbnail user_val.picture|default:'default_profile.png' 400x400 crop %}" alt="{{ user_val.user.name }}" title="{{ user_val.user.name }}" style="width:100%;">
+   <img src="{% thumbnail user_val.picture|default:'default_profile.png' 400x400 crop %}" alt="{{ user_val.user.name }}" title="{{ user_val.user.name }}" style="width:100%;"/>
     <a href="{% url "profiles:show" slug=user_val.slug %}"><h1 style="color: black">{{ user_val.user.name.capitalize }}</h1></a>
 {% if user_val.user.is_staff and user_val.user.is_active %}
   <p class="title" style="color: black">Teacher at</p>
@@ -73,8 +106,10 @@ opacity: 0.9;
   <a href="{{ user_val.twitter }}" ><i class="fa fa-twitter"></i></a>
   <a href="{{ user_val.linkedin }}"><i class="fa fa-linkedin"></i></a>
   <a href="{{ user_val.github }}"><i class="fa fa-github"></i></a>
+
+{# For the contact me button #}
   <p><button onclick="alert('My Email is :  {{ user_val.user.email }}')">Contact</button></p>
-    </a>
+
 {#</div>#}
 </div>
 </div>
@@ -100,8 +135,8 @@ background: -webkit-linear-gradient(to left, #A7BFE8, #6190E8);  /* Chrome 10-25
 background: linear-gradient(to left, #A7BFE8, #6190E8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 opacity: 0.8;
 ">
-    <a href="#">
-        <div class="mask waves-effect waves-light rgba-white-slight"></div>
+{#    <a href="#">#}
+{#        <div class="mask waves-effect waves-light rgba-white-slight"></div>#}
 
   <img src="{% thumbnail user_val.picture|default:'default_profile.png' 400x400 crop %}" alt="{{ user_val.user.name }}" title="{{ user_val.user.name }}" style="width:100%;" onclick="alert('{{ user_val.user.name }}')">
     <a href="{% url "profiles:show" slug=user_val.slug %}"> <h1 style="color: black">{{ user_val.user.name.capitalize }}</h1></a>
@@ -115,17 +150,18 @@ opacity: 0.8;
   <a href="{{ user_val.twitter }}"><i class="fa fa-twitter"></i></a>
   <a href="{{ user_val.linkedin }}"><i class="fa fa-linkedin"></i></a>
   <a href="{{ user_val.github }}"><i class="fa fa-github"></i></a>
-  <p><button onclick="alert('My Email is :  {{ user_val.user.email }}')">Contact</button></p>
+  <p><button  onclick="alert('My Email is :  {{ user_val.user.email }}')">Contact</button></p>
 
-    </a>
+{#    </a>#}
 </div>
 </div>
 {% endif %}
 {% endfor %}
 
     </div>
-
-
             <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         </div>
+
+
 {% endblock container %}
+
