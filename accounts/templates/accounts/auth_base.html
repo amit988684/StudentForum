@@ -5,14 +5,31 @@
 {% block navbar %}
 {% endblock %}
 
+{% block extrahead %}
+<style>
+     form label{
+         font-weight: bold;color: black;
+     }
+    .help-block{
+        font-weight: bold;
+        color: red;
+    }
+    p{
+        color: black;
+    }
+    </style>
+{% endblock %}
+
 {% block container %}
-<div class="container form-box">
+    <div class="text-page" style="background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/blurred-background-images-web-design-14.jpg');background-attachment: fixed;">
+
+<div class="container form-box" style="font-weight: bold">
   <div class="text-center">
     <h2>{% block form_heading %}{% endblock %}</h2>
   </div>
   {% block form %}
   {% endblock %}
 </div>
-
+    </div>
 {% endblock container %}
 

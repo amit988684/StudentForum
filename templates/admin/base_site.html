@@ -12,6 +12,14 @@
 {% endblock %}
 
 {% block extrahead %}{{ block.super }}
-  <link href="{% static 'site/css/main.css' %}" rel="stylesheet">
+
+  <style>
+    html, body{
+    height:100% ! important;		/* For full height images */
+        background-image: none ! important;
+}
+    </style>
+    <link href="{% static 'site/css/main.css' %}" rel="stylesheet">
+
 {% endblock %}
 

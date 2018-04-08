@@ -28,6 +28,7 @@ TEMPLATES = [
             join(BASE_DIR, 'assignment/templates'),
             join(BASE_DIR, 'event/templates'),
             join(BASE_DIR, 'contactus/templates'),
+            join(BASE_DIR, 'accounts/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -181,12 +182,12 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'tGur-f8jM7wHO-pL3uNsYqLv'
 
 ################################################################################
 # For Mail Sending
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 # DEFAULT_FROM_EMAIL = 'testing@example.com'
-EMAIL_HOST ='smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
+# EMAIL_HOST ='smtp.gmail.com'
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 587
 
 # BOOTSTRAP_ADMIN_SIDEBAR_MENU = False
 FORMAT_MODULE_PATH = 'demo_time_set.formats'
