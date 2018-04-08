@@ -6,16 +6,27 @@
 
 {% block title %}{{ block.super }}Profile{% endblock %}
 
+{% block extrahead %}
+<style>
+     form label{
+         font-weight: bold;color: black;
+     }
+    .form{
+        font-weight: bold;
+    }
+    </style>
+{% endblock %}
+
 {% block navbar-left %}
       {% include "_navbar.html" %}
 {% endblock %}
 
 <!-- Benefits of the Django application -->
 {% block container %}
-
-<div class="container">
-  <h1 class="text-primary">Edit Profile</h1>
-  <hr>
+<div class="text-page"  style="background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/blurred-background-images-web-design-14.jpg');background-attachment: fixed;">
+<div class="container" style="font-weight: bold">
+  <h1 class="text-primary" style="font-weight: bold">Edit Profile</h1>
+  <hr style="border-color: black;border-width: 2px">
   <div class="row">
     <!-- left column -->
     <div class="col-md-3">
@@ -41,6 +52,7 @@
     </div>
   </div>
 </div>
+    </div>
 {% endblock %}
 
 

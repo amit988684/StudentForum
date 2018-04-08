@@ -133,8 +133,11 @@ background: linear-gradient(to right, #3d72b4, #525252); /* W3C, IE 10+/ Edge, F
 
 /* Profile page styling */
 .profile-head {
-    background:url("/static/ubuntu.jpg") repeat;
+    /*background:url("/static/ubuntu.jpg") repeat;*/
     padding: 70px 0px 30px 20px;
+    background: #525252;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3d72b4, #525252);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3d72b4, #525252); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .profile-body {
     padding: 4px 0px;

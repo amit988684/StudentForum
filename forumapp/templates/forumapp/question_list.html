@@ -11,7 +11,12 @@
         <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
         <link rel="stylesheet" href="{% static "css/forum_base.css" %}">
 {#        <link rel="stylesheet" href="{% static "css/forumapp_css.css" %}">#}
-
+<style>
+.btn:hover
+{
+opacity: 1 !important;
+}
+</style>
 {% endblock %}
 
 
@@ -26,7 +31,7 @@
 
     <!-- For the click and open a collapsing bar effect-->
 <center>
-  <button style="color: black;width: 600px;margin-left: -25px;border-bottom-left-radius: 25px;border-bottom-right-radius: 25px;border-bottom-width: 8px;" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">
+  <button style="color: black;width: 600px;margin-left: -25px;border-bottom-left-radius: 25px;border-bottom-right-radius: 25px;border-bottom-width: 8px;opacity: 0.7" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">
    Have A Question ??  <span class="glyphicon glyphicon-arrow-down"></span>
   </button>
 {#</div>#}
@@ -64,13 +69,13 @@
         <div class="container">
             <span class="page-links">
                 {% if page_obj.has_previous %}
-                    <a style="font-size: larger" class="btn btn-primary col-sm-3" href="?page={{ page_obj.previous_page_number }}">previous</a>
+                    <a style="font-size: larger;opacity: 0.8;" class="btn btn-primary col-sm-3" href="?page={{ page_obj.previous_page_number }}">previous</a>
                 {% endif %}
                 <span class="page-current">
                 <h1 style="color:black;text-align: center" class="col-sm-6">    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</h1>
                 </span>
                 {% if page_obj.has_next %}
-                    <a style="font-size: larger;float: left" class="btn btn-primary col-sm-3" href="?page={{ page_obj.next_page_number }}">next</a>
+                    <a style="font-size: larger;float: left;opacity: 0.8;" class="btn btn-primary col-sm-3" href="?page={{ page_obj.next_page_number }}">next</a>
                 {% endif %}
             </span>
         </div>
@@ -87,12 +92,13 @@
 
     {% for question in question_list %}
 
-        <div class="jumbotron col-sm-12 container" style="border: 3px ridge;border-color: black;background-image: linear-gradient(orange,white)">
+        <div class="jumbotron col-sm-12 container" style="border: 3px ridge;border-color: black;background-image: url('https://cdn.pixabay.com/photo/2017/07/29/13/17/ahead-2551465_960_720.jpg');background-attachment: fixed;background-size: 100%;
+">
 {#Question #}
 
             <!-- Profile Image -->
 
-   <div class="row" style="margin-left: -50px;">
+   <div class="row">
       <div class="row2">
           <!-- Taking User To The profile page of the author of the post-->
        <div class="col-md-10">
@@ -103,12 +109,12 @@
                 <p>
                 <strong><a title="Author Name" style="color: green;" href="{% url "profiles:show" slug=question.author.profile.slug %}">{{ question.author.name.capitalize }}</a></strong><br>
 
-                <a title="Author Email" style="color: black;font-size: medium" href="{% url "profiles:show" slug=question.author.profile.slug %}">{{ question.author.email.capitalize }}</a></p>
+                <a title="Author Email" style="color: black;font-size: medium;font-weight: bold" href="{% url "profiles:show" slug=question.author.profile.slug %}">{{ question.author.email.capitalize }}</a></p>
 </div>
           <!-- Added Delete And Edit Functionality to the Questions-->
           {% if question.author.profile.user == user %}
-          <a title="Edit Question ?" class="btn btn-success" href="{% url 'forumapp:question_edit' pk=question.pk %}">Edit?</a>
-          <a title="Delete Question" class="btn btn-danger" href="{% url 'forumapp:question_remove' pk=question.pk %}">Delete?</a>
+          <a title="Edit Question ?" class="btn btn-success" href="{% url 'forumapp:question_edit' pk=question.pk %}" style="opacity: 0.5;">Edit?</a>
+          <a title="Delete Question" class="btn btn-danger" href="{% url 'forumapp:question_remove' pk=question.pk %}" style="opacity: 0.5">Delete?</a>
 {% endif %}
 
 
@@ -120,9 +126,9 @@
 
 
         <div class="container">
-<p class="lead" style="color: black">{{ question.content }}</p>
+<p class="lead" style="color: black;font-weight: 500">{{ question.content }}</p>
 </div>
-  <p class="read-more" style="color: black"><a title="Answer Question" href="{% url "forumapp:question_detail" pk=question.pk %}" class="btn btn-block" style="border-bottom-left-radius: 20%;border-bottom-right-radius: 20%;border-bottom-color: red;color: black;background-color: darkorange;">Answer ?</a>
+  <p class="read-more" style="color: black"><a title="Answer Question" href="{% url "forumapp:question_detail" pk=question.pk %}" class="btn btn-block" style="border-bottom-left-radius: 20%;border-bottom-right-radius: 20%;border-bottom-color: red;color: black;background-color: lightgreen;opacity: 0.6">Answer ?</a>
   </p>
 
     <hr class="jumbotron-fluid" style="border-color: black;border-width: 2px">

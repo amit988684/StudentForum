@@ -9,19 +9,22 @@
 {% endblock %}
 
 {% block extrahead %}
-<style>
-body {
-height: 100%;
-    background-image: none;
-    background-attachment: scroll;
+    <style>
+    body{
+        background-image: url('https://cdn.pixabay.com/photo/2017/07/29/13/17/ahead-2551465_960_720.jpg');background-attachment: fixed;background-size: 100%;
+    }
+    .btn:hover
+{
+opacity: 1 !important;
 }
-</style>
+    </style>
 {% endblock %}
 
 {% block container %}
+{#    <div style="border: 3px ridge;border-color: black;background-image: url('https://cdn.pixabay.com/photo/2017/07/29/13/17/ahead-2551465_960_720.jpg');background-attachment: fixed;background-size: 100%;">#}
 {#    <h1>New comment</h1>#}
-
-    <div class="container col-sm-offset-3 col-sm-6" style="">
+<strong>
+    <div class="container col-sm-offset-3 col-sm-6" style="color: black;">
     <form method="POST">
     {% csrf_token %}
     {{form|crispy}}
@@ -31,8 +34,9 @@ height: 100%;
 
     </form>
 </div>
+    </strong>
 {#    <script>var editor = new MediumEditor('.editable');</script>#}
-
+{#</div>#}
 {% endblock container %}
 
 {% block footer %}
