@@ -95,6 +95,9 @@ INSTALLED_APPS = (
     'chatapp',
     'contactus',
     'event',
+    'news',
+
+
     'bootstrap3_datetime',
     'djng',
     # 'bootstrap_admin',  # always before django.contrib.admin

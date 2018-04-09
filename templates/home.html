@@ -50,9 +50,32 @@ background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, F
 <div class="container">
   <div class="row">
     <div class="col-lg-4">
-      <h2>Something</h2>
-      <p>{% lorem %}</p>
-      <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+      <h2>News</h2>
+
+{#        News             #}
+      <div style="color: black;">
+          <marquee direction="up" behavior="scroll" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">
+   <ul class="menu" type="box">
+
+{#   This logic is from news app where this home page is rendered with the extra function of news   #}
+       {% for news in news_list %}
+       <li><i class="fa fa-caret-right"></i><a href="#" style="color: black;">&nbsp;&nbsp;{{ news.news_details }}</a></li>
+       {% endfor %}
+{#            end of the news               #}
+{#   <button onclick="open('http://www.google.com','name','width=500,height=500');">Open</button>#}
+
+{#       <li><i class="fa fa-caret-right"></i><a href="#" style="color: black;">&nbsp;&nbsp;IIITDM Kurnool is shifting to to its permanent campus. </a></li>#}
+{#       <li><i class="fa fa-caret-right"></i><a href="#" style="color: black;">&nbsp;&nbsp;Advertisement for admission to  SC seats 2014</a></li>#}
+{#       <li><i class="fa fa-caret-right"></i><a href="#" style="color: black;">&nbsp;&nbsp;Notification - SC/ST & Minority Cell</a></li>#}
+{#       <li><i class="fa fa-caret-right"></i><a href="#" style="color: black;">&nbsp;&nbsp;Information About SC-ST Scholarship</a></li>#}
+{#       <li><i class="fa fa-caret-right"></i><a href="#" style="color: black;">&nbsp;&nbsp;Project Vacancy: (JRF)</a></li>#}
+{#       <li><i class="fa fa-caret-right"></i><a href="#" style="color: black;">&nbsp;&nbsp;PG Admission (January Session) 2015</a></li>#}
+   </ul><!-- /.menu -->
+</marquee>
+      </div>
+
+
+{#      <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>#}
     </div>
     <div class="col-lg-4">
       <h2>Something</h2>
