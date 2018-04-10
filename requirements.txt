@@ -92,3 +92,4 @@ Werkzeug==0.14.1
 whichcraft==0.4.1
 xattr==0.9.3
 xhtml2pdf==0.2.1
+gunicorn==19.7.1
