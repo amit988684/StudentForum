@@ -147,6 +147,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 ALLOWED_HOSTS = ['172.16.14.98','127.0.0.1',]
 
 # Crispy Form Theme - Bootstrap 3
@@ -204,3 +205,5 @@ FORM_RENDERER = 'djng.forms.renderers.DjangoAngularBootstrap3Templates'
 
 # import django_heroku
 # django_heroku.settings(locals())
+# ADDED BY ME
+STATIC_ROOT = '/static/'
