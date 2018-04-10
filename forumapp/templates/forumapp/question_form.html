@@ -28,7 +28,7 @@
 <center>
 
     <article style="color: white">
-        <h1 style="color: white">New post</h1>
+        <h1 style="color: white">New Question</h1>
     <form method="POST" class="post-form">
     {% csrf_token %}
     {{ form|crispy }}
@@ -42,10 +42,12 @@
 {% endblock %}
 
     <!-- To Remove Footer Just Add The template tag blank in the inherited html-->
+
+    </div>
+{% endblock %}
+
     {% block scripts %}
 
     {% endblock %}
     {% block footer %}
     {% endblock %}
-    </div>
-{% endblock %}

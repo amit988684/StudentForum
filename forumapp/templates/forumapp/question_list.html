@@ -30,12 +30,13 @@ opacity: 1 !important;
 {#The Cover Type On the Top has the form#}
 
     <!-- For the click and open a collapsing bar effect-->
-<center>
-  <button style="color: black;width: 600px;margin-left: -25px;border-bottom-left-radius: 25px;border-bottom-right-radius: 25px;border-bottom-width: 8px;opacity: 0.7" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">
+
+<div class="text-center">
+  <button style="color: black;margin-left: -25px;border-bottom-left-radius: 25px;border-bottom-right-radius: 25px;border-bottom-width: 8px;opacity: 0.7;" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">
    Have A Question ??  <span class="glyphicon glyphicon-arrow-down"></span>
   </button>
-{#</div>#}
-</center>
+{#</div>#}</div>
+
 
 
 
@@ -45,9 +46,10 @@ opacity: 1 !important;
 <!-- Form -->
 <div class="container">
   <div class="row">
-    <div class="col-sm-10">
+    <div class="col-sm-offset-0">
         <!-- Functionality added in Iframe -->
-        <center><iframe onsubmit="window.location.reload()" src="{% url "forumapp:question_new" %}" style="border:10px solid black;text-align: center;" width="1045" height="550" ></iframe></center>
+{#        <center><iframe onsubmit="window.location.reload()" src="{% url "forumapp:question_new" %}" style="border:10px solid black;text-align: center;" width="1045" height="550" ></iframe></center>#}
+       <iframe class="col-md-12" onsubmit="window.location.reload()" src="{% url "forumapp:question_new" %}" style="border:2px solid black;text-align: center;height: 500px"></iframe>
     </div>
   </div>
 </div>
