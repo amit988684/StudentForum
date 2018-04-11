@@ -1,6 +1,7 @@
 # StudentForum
 A basic question and answer forum 
-
+Note : Cannot add all the photo's - For more photo checkout the folder project_photos/
+ 
 <h1>Technology Used : <br><ul>
 <li>Django</li>
 <li>HTML</li>
@@ -35,9 +36,9 @@ comment to give the answer.
 <h1>Basic Authentication : Login,Logout,Signup functionalities</h1><br>
 
 
-<h2>Front Page</h2>
+<h2>Front Page after login</h2>
 <p align="center">
-  <img src="project_photos/front.png" width="500"/>
+  <img src="project_photos/front_after_login.png" width="500"/>
 </p>
 
 
@@ -46,34 +47,51 @@ comment to give the answer.
 <li>
 <h2>Forum App</h2>
 <p align="center">
-  <img src="project_photos/forum_tab_questions.png" width="500"/>
+  <img src="project_photos/forum_app.png" width="500"/>
+  <img src="project_photos/forum_question.png" width="500"/>
 </p>
 </li>
 <li>
 <h2>Forum App Comments</h2>
 <p align="center">
-  <img src="project_photos/comments_forum.png" width="500"/>
+  <img src="project_photos/comment_question.png" width="500"/>
+  <img src="project_photos/comments.png" width="500"/>
 </p>
 </li>
+<li>
+<h2>Delete Question ?</h2>
+<p align="center">
+  <img src="project_photos/delete_question.png" width="500"/>
+</p>
+</li>
+
 </ul>
 
 
 <h1>Profile</h1>
+
 <p align="center">
-  <img src="project_photos/profile.png" width="500"/>
+  <img src="project_photos/profile_b.png" width="500"/>
 </p>
+<h1>Profile Edit</h1>
+
+<p align="center">
+  <img src="project_photos/edit_profile.png" width="500"/>
+</p>
+
+
 
 <h1>Assignment Tab</h1>
 <ul><li>
 <h2>Assignment Seen By Teacher</h2>
 <p align="center">
-  <img src="project_photos/assignment_tab_teachers.png" width="500"/>
+  <img src="project_photos/assignment_tab.png" width="500"/>
 </p>
 </li>
 <li>
-<h2>Share Assignment ? by teacher</h2>
+<h2>Add Assignment ? by teacher</h2>
 <p align="center">
-  <img src="project_photos/share_assignment.png" width="500"/>
+  <img src="project_photos/add_assignment.png" width="500"/>
 </p>
 </li>
 </ul>
@@ -82,21 +100,49 @@ comment to give the answer.
 <ul><li>
 <h2>Slides for teacher View</h2>
 <p align="center">
-  <img src="project_photos/slides_teacher_view.png" width="500"/>
+  <img src="project_photos/slies_assignment.png" width="500"/>
 </p>
 </li>
 <li>
 <h2>Slides Upload Teacher Forum</h2>
 <p align="center">
-  <img src="project_photos/slides_teacher_forum.png" width="500"/>
+  <img src="project_photos/slides_upload.png" width="500"/>
 </p>
 </li>
 <li>
 <h2>Slides View For Students</h2>
 <p align="center">
-  <img src="project_photos/slides_student_view.png" width="500"/>
+  <strong>For the student looks will be same just the share button and the delete button is removed.</strong>
 </p>
 </li>
 </ul>
+
+
+<h1>Events Tab</h1>
+<ul><li>
+<h2>Private Events</h2>
+<p align="center">
+  <img src="project_photos/private_events.png" width="500"/>
+</p>
+</li>
+<li>
+<h2>Public Events</h2>
+<p align="center">
+  <img src="project_photos/public_events.png" width="500"/>
+</p>
+</li>
+<li>
+<h2>Add Event</h2>
+<p align="center">
+  <img src="project_photos/add_event.png" width="500"/>
+</p>
+</li>
+</ul>
+
+
+<h1>Developers Tab</h1>
+<p align="center">
+  <img src="project_photos/developer_tab.png" width="500"/>
+</p>
 
 <script src="{% static 'node_modules/angular/angular.js' %}" type="text/javascript">

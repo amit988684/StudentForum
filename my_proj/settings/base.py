@@ -206,4 +206,4 @@ FORM_RENDERER = 'djng.forms.renderers.DjangoAngularBootstrap3Templates'
 # import django_heroku
 # django_heroku.settings(locals())
 # ADDED BY ME
-STATIC_ROOT = '/static/'
+# STATIC_ROOT = '/static/'
