@@ -2,40 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f107204-2a24-482e-bc5b-8d9d21be0155" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/add_assignment.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/add_event.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/all_user_tab.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/assignment_tab.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/comment_question.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/comments.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/contact_us.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/delete_question.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/developer_tab.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/edit_profile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/edit_question.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/forum_app.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/forum_question.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/front_after_login.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/front_scrolled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/login.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/private_events.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/profile_b.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/public_events.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/sign_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/slides_upload.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_photos/slies_assignemnt.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_photos/comments_forum.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_photos/forum_tab_questions.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_photos/front.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_photos/profile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_photos/share_assignment.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_photos/slides_student_view.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_photos/slides_teacher_forum.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project_photos/slides_teacher_view.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_proj/settings/base.py" afterPath="$PROJECT_DIR$/my_proj/settings/base.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,11 +32,21 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="54">
-                <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+              <first_editor relative-caret-position="270">
+                <caret line="102" column="41" lean-forward="false" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -977,13 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my_proj/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1051,11 +1021,19 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="54">
-            <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <first_editor relative-caret-position="270">
+            <caret line="102" column="41" lean-forward="false" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
             <folding />
           </first_editor>
           <second_editor />

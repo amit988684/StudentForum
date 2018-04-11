@@ -100,7 +100,7 @@ comment to give the answer.
 <ul><li>
 <h2>Slides for teacher View</h2>
 <p align="center">
-  <img src="project_photos/slies_assignment.png" width="500"/>
+  <img src="project_photos/slies_assignemnt.png" width="500"/>
 </p>
 </li>
 <li>
