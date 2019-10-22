@@ -60,7 +60,7 @@ MarkupSafe==1.0
 misaka==2.1.0
 oauthlib==2.0.6
 pdfrw==0.4
-Pillow==5.0.0
+Pillow==6.2.0
 pinax-calendars==2.0.4
 poyo==0.4.1
 psycopg2==2.7.4
