@@ -15,7 +15,7 @@ click==6.7
 comment==0.0.44
 cookiecutter==1.6.0
 cssselect2==0.2.1
-Django==1.11.10
+Django==2.2.24
 django-admin-bootstrapped==2.5.7
 django-allauth==0.35.0
 django-angular==2.0.2
