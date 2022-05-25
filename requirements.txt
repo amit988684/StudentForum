@@ -68,7 +68,7 @@ public==0.0.65
 pycparser==2.18
 pycryptodomex==3.4.12
 pyjwkest==1.4.0
-PyJWT==1.6.0
+PyJWT==2.4.0
 PyPDF2==1.26.0
 Pyphen==0.9.4
 python-dateutil==2.6.1
