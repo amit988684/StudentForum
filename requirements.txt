@@ -1,5 +1,5 @@
 amqp==2.2.2
-arrow==0.12.1
+arrow==0.15.1
 assert-exists==0.0.44
 backports.functools-lru-cache==1.5
 billiard==3.5.0.3
